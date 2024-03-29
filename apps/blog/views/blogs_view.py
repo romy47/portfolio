@@ -1,8 +1,7 @@
 from django.http import HttpResponse
-from django.views import View  # import the View parent class
+from django.shortcuts import render
+from django.views import View
 
-class BlogsView(View):  # create a view class
-    # change the function-based view to be called get and add the self param
+class BlogsView(View):
     def get(self, request):
-        html = '<html><body>Blogs page works!</body></html>'
-        return HttpResponse(html)
+        return render(request, template_name = 'blog/blogs.html')
