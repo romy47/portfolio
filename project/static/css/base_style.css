@@ -1,0 +1,51 @@
+/* Body STARTS    ********************************       */
+html {
+    min-height: 100%;
+}
+
+body {
+    height: 100vh;
+}
+
+.container {
+    min-height: calc(100vh - 160px);
+}
+
+/* Body ENDS      ********************************       */
+
+/* Header   STARTS   ********************************       */
+
+.nav-social-buttons {
+    padding: 8px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.nav-social-buttons.fa-bitbucket {
+    background: #2684FF;
+    color: white;
+}
+
+.nav-social-buttons.fa-github {
+    background: #000;
+    color: white;
+}
+
+.nav-social-buttons.fa-linkedin-in {
+    background: #0A66C2;
+    color: white;
+}
+
+.nav-social-buttons.fa-google-scholar {
+    background: #78A5CE;
+    color: white;
+}
+
+/* Header ENDS    ********************************       */
