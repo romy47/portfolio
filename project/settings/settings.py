@@ -27,6 +27,7 @@ INSTALLED_APPS = [
     'apps.blog',
     'apps.home',
     'apps.portfolioproject',
+    'apps.programming'
 ]
 
 MIDDLEWARE = [
