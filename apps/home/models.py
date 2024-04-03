@@ -60,7 +60,7 @@ class Education(models.Model):
     updated_at = models.DateTimeField(auto_now = True)
 
 class Publication(models.Model):
-    title = models.CharField()
+    title = models.CharField(max_length=80)
     description = models.TextField()
     projects = models.ManyToManyField('portfolioproject.Project')
     url = models.URLField(blank = True, default = '')
