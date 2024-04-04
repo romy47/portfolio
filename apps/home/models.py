@@ -29,7 +29,7 @@ class EducationActivity(models.Model):
 class ExperienceActivity(models.Model):
     description = models.TextField()
     experience = models.ForeignKey('home.Experience', on_delete = models.PROTECT, related_name = 'experience_activities') 
-    programming_tool = models.ForeignKey('programming.ProgrammingTool', on_delete = models.PROTECT, null = True, blank = True, related_name = 'experience_activities') 
+    programming_tools = models.ManyToManyField('programming.ProgrammingTool', related_name = 'experience_activities') 
     url = models.URLField(blank = True, default = '')
     is_featured = models.BooleanField(default = False)
     created_at = models.DateTimeField(auto_now_add = True)
