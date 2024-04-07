@@ -159,7 +159,66 @@
 
 <br><br>
 <h3 class="mt-5">Experiences</h3>
-<div class="row">
+
+{% for experience in experiences %}
+<div class="row mb-4">
+    <div class="col-md-3 d-flex flex-column justify-content-between py-2">
+        <p class="display-3 text-opacity-50 fw-bold text-secondary">
+            {% if experience.ended_at is None %}
+            Present
+            {% else %}
+            {{ experience.ended_at|date:"Y" }}
+            {% endif %}
+        </p>
+        <p class="display-3 text-opacity-50 fw-bold text-secondary">{{ experience.started_at|date:"Y" }}</p>
+    </div>
+    <div class="col-md-9 p-3">
+        <div class="card border-1 shadow">
+            <div class="card-body pb-1">
+                <div class="d-flex justify-content-between">
+                    <div>
+                        <p class="mb-0 h3 fw-bold text-dark-emphasis">
+                            {{experience.position}}</p>
+                        <p class="fs-6 text-secondary fw-normal mb-1">{{education.specialization}}</p>
+                        <p class="mb-0 h5 text-dark-emphasis">{{experience.employer.name}}
+                            <span class="fs-6 text-secondary fw-normal ms-3">{{experience.started_at|date:"Y"}} -
+                                {% if experience.ended_at is None %}
+                                Present
+                                {% else %}
+                                {{ experience.ended_at|date:"Y" }}
+                                {% endif %}
+                            </span>
+                        </p>
+                    </div>
+                    <img class="opacity-75" style="height: 75px;" src="{{experience.employer.image.url}}">
+                </div>
+            </div>
+            <hr class="my-2">
+            {% for activity in experience.experience_activities.all%}
+            <div class="card-body pt-0 pb-1 mb-1 d-flex justify-content-start align-items-start">
+                <i class="fa-regular fa-circle-check me-2 mt-1"></i>
+                {% if activity.url and activity.url.strip %}
+                <a class="mb-0 flex-grow-1 link-secondary link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover"
+                    href="{{activity.url}}">{{activity.description}}</a>
+                {% else %}
+                <p class="mb-0 flex-grow-1">{{activity.description}}</p>
+                {% endif %}
+                <div style="min-width: 250px;">
+                    {% for tool in activity.programming_tools.all%}
+                    <span class="badge bg-light border shadow border-dark-subtle text-secondary float-end m-1 mb-0">
+                        {{tool.title}}
+                        <!-- <img class="opacity-75" style="height: 40px;" src="{{tool.image.url}}"> -->
+                    </span>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endfor %}
+
+<!-- <div class="row">
     <div class="col-md-3 d-flex flex-column justify-content-between">
         <p class="display-1 text-opacity-50 fw-bold text-secondary">2019</p>
         <p class="display-1 text-opacity-50 fw-bold text-secondary">2017</p>
@@ -199,15 +258,16 @@
             </div>
         </div>
     </div>
-</div>
+
+</div> -->
 
 <br><br>
 <h3 class="mt-5">Education</h3>
 {% for education in educations %}
 <div class="row mb-4">
     <div class="col-md-3 d-flex flex-column justify-content-between py-2">
-        <p class="display-2 text-opacity-50 fw-bold text-secondary">{{ education.ended_at|date:"Y" }}</p>
-        <p class="display-2 text-opacity-50 fw-bold text-secondary">{{ education.started_at|date:"Y" }}</p>
+        <p class="display-3 text-opacity-50 fw-bold text-secondary">{{ education.ended_at|date:"Y" }}</p>
+        <p class="display-3 text-opacity-50 fw-bold text-secondary">{{ education.started_at|date:"Y" }}</p>
     </div>
     <div class="col-md-9 p-3">
         <div class="card border-1 shadow">
@@ -224,36 +284,17 @@
                 </div>
             </div>
             <hr class="my-2">
-            <!-- <div class="card-body pt-0 pb-1 d-flex justify-content-between align-items-center">
-                <p class="mb-0"><i class="fa-regular fa-circle-check me-2"></i>Built a digital library interface with
-                    MEAN stack</p>
-                <div>
-                    <a href="#" class="fa fa-brands circular-tag fa-linkedin-in bg-light text-dark"
-                        title="Linked in"></a>
-                    <a href="#" class="fa fa-brands circular-tag fa-github bg-light text-dark" title="GitHub"></a>
-                    <a href="#" class="fa fa-brands circular-tag fa-bitbucket bg-light text-dark" title="Bitbucket"></a>
-                </div>
-            </div> -->
             {% for activity in education.education_activities.all%}
-
             <div class="card-body pt-0 pb-1 mb-1 d-flex justify-content-start align-items-start">
                 <i class="fa-regular fa-circle-check me-2 mt-1"></i>
-                {% if activity.url is None %}
-                <p class="mb-0">{{activity.description}}</p>
-                {% else %}
+                {% if activity.url and activity.url.strip %}
                 <a class="mb-0 link-secondary link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover"
                     href="{{activity.url}}">{{activity.description}}</a>
+                {% else %}
+                <p class="mb-0">{{activity.description}}</p>
                 {% endif %}
-
-                <!-- <div>
-                    <a href="#" class="fa fa-brands circular-tag fa-linkedin-in bg-light text-dark"
-                        title="Linked in"></a>
-                    <a href="#" class="fa fa-brands circular-tag fa-github bg-light text-dark" title="GitHub"></a>
-                    <a href="#" class="fa fa-brands circular-tag fa-bitbucket bg-light text-dark" title="Bitbucket"></a>
-                </div> -->
             </div>
             {% endfor %}
-
         </div>
     </div>
 </div>

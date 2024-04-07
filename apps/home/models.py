@@ -18,6 +18,9 @@ class Employer(models.Model):
     created_at = models.DateTimeField(auto_now_add = True)
     updated_at = models.DateTimeField(auto_now = True)
 
+    def __str__(self):
+        return self.name
+
 class EducationActivity(models.Model):
     description = models.TextField()
     education = models.ForeignKey('home.Education', on_delete = models.PROTECT, related_name = 'education_activities') 
@@ -29,7 +32,7 @@ class EducationActivity(models.Model):
 class ExperienceActivity(models.Model):
     description = models.TextField()
     experience = models.ForeignKey('home.Experience', on_delete = models.PROTECT, related_name = 'experience_activities') 
-    programming_tools = models.ManyToManyField('programming.ProgrammingTool', related_name = 'experience_activities') 
+    programming_tools = models.ManyToManyField('programming.ProgrammingTool', related_name = 'experience_activities', blank=True) 
     url = models.URLField(blank = True, default = '')
     is_featured = models.BooleanField(default = False)
     created_at = models.DateTimeField(auto_now_add = True)
@@ -43,6 +46,9 @@ class Experience(models.Model):
     ended_at = models.DateField(null = True, blank = True)
     created_at = models.DateTimeField(auto_now_add = True)
     updated_at = models.DateTimeField(auto_now = True)
+
+    def __str__(self):
+        return self.position 
 
 class EducationalInstitute(models.Model):
     name = models.CharField(max_length=80)
