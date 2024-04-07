@@ -24,13 +24,13 @@
 <br><br>
 <h3 class="mt-5">Skills</h3>
 <div class="row">
+    {% for category in categories %}
     <div class="col-md-4 p-3">
         <div class="card bg-secondary-subtle border-0">
             <div class="card-body pb-0">
-                <i class="fas fa-database fa-2x pb-4"></i>
-                <div class="d-flex justify-content-between">
-                    <p class="mb-0 h5">Database</p>
-                    <p class="mb-0 hour">12:15 PM</p>
+                <div class="d-flex justify-content-between align-items-center">
+                    <p class="mb-0 h5">{{category.title}}</p>
+                    <img style="max-height: 40px;" src="{{category.image.url}}">
                 </div>
             </div>
             <hr>
@@ -50,87 +50,7 @@
             </div>
         </div>
     </div>
-
-    <div class="col-md-4 p-3">
-        <div class="card bg-secondary-subtle border-0">
-            <div class="card-body pb-0">
-                <i class="fas fa-database fa-2x pb-4"></i>
-                <div class="d-flex justify-content-between">
-                    <p class="mb-0 h5">Database</p>
-                    <p class="mb-0 hour">12:15 PM</p>
-                </div>
-            </div>
-            <hr>
-            <div class="card-body pt-0 d-flex">
-                <i class="fa-solid fa-server me-2 mt-1"></i>
-                <div>
-                    <h6 class="font-weight-bold mb-1"></i>Mongo DB</h6>
-                    <p class="mb-0">5 Projects, 3 Work Experiences</p>
-                </div>
-            </div>
-            <div class="card-body pt-0 d-flex">
-                <i class="fa-brands fa-bitcoin me-2 mt-1"></i>
-                <div>
-                    <h6 class="font-weight-bold mb-1"></i>PostGres SQL</h6>
-                    <p class="mb-0">5 Projects, 3 Work Experiences</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="col-md-4 p-3">
-        <div class="card bg-secondary-subtle border-0">
-            <div class="card-body pb-0">
-                <i class="fas fa-database fa-2x pb-4"></i>
-                <div class="d-flex justify-content-between">
-                    <p class="mb-0 h5">Database</p>
-                    <p class="mb-0 hour">12:15 PM</p>
-                </div>
-            </div>
-            <hr>
-            <div class="card-body pt-0 d-flex">
-                <i class="fa-solid fa-server me-2 mt-1"></i>
-                <div>
-                    <h6 class="font-weight-bold mb-1"></i>Mongo DB</h6>
-                    <p class="mb-0">5 Projects, 3 Work Experiences</p>
-                </div>
-            </div>
-            <div class="card-body pt-0 d-flex">
-                <i class="fa-brands fa-bitcoin me-2 mt-1"></i>
-                <div>
-                    <h6 class="font-weight-bold mb-1"></i>PostGres SQL</h6>
-                    <p class="mb-0">5 Projects, 3 Work Experiences</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="col-md-4 p-3">
-        <div class="card bg-secondary-subtle border-0">
-            <div class="card-body pb-0">
-                <i class="fas fa-database fa-2x pb-4"></i>
-                <div class="d-flex justify-content-between">
-                    <p class="mb-0 h5">Database</p>
-                    <p class="mb-0 hour">12:15 PM</p>
-                </div>
-            </div>
-            <hr>
-            <div class="card-body pt-0 d-flex">
-                <i class="fa-solid fa-server me-2 mt-1"></i>
-                <div>
-                    <h6 class="font-weight-bold mb-1"></i>Mongo DB</h6>
-                    <p class="mb-0">5 Projects, 3 Work Experiences</p>
-                </div>
-            </div>
-            <div class="card-body pt-0 d-flex">
-                <i class="fa-brands fa-bitcoin me-2 mt-1"></i>
-                <div>
-                    <h6 class="font-weight-bold mb-1"></i>PostGres SQL</h6>
-                    <p class="mb-0">5 Projects, 3 Work Experiences</p>
-                </div>
-            </div>
-        </div>
-    </div>
+    {% endfor %}
 </div>
 
 <br><br>
@@ -283,25 +203,28 @@
 
 <br><br>
 <h3 class="mt-5">Education</h3>
-<div class="row">
-    <div class="col-md-3 d-flex flex-column justify-content-between">
-        <p class="display-1 text-opacity-50 fw-bold text-secondary">2022</p>
-        <p class="display-1 text-opacity-50 fw-bold text-secondary">2019</p>
+{% for education in educations %}
+<div class="row mb-4">
+    <div class="col-md-3 d-flex flex-column justify-content-between py-2">
+        <p class="display-2 text-opacity-50 fw-bold text-secondary">{{ education.ended_at|date:"Y" }}</p>
+        <p class="display-2 text-opacity-50 fw-bold text-secondary">{{ education.started_at|date:"Y" }}</p>
     </div>
     <div class="col-md-9 p-3">
-        <div class="card bg-secondary-subtle border-0">
+        <div class="card border-1 shadow">
             <div class="card-body pb-1">
-                <div class="d-flex justify-content-between mb-2">
-                    <p class="mb-0 h3 fw-bold text-dark-emphasis">Master of Science</p>
-                    <i class="fas fa-database fa-2x"></i>
-                </div>
                 <div class="d-flex justify-content-between">
-                    <p class="mb-0 h5 text-dark-emphasis">University of Regina</p>
-                    <p class="mb-0 hour">2019 - 2022</p>
+                    <div>
+                        <p class="mb-0 h3 fw-bold text-dark-emphasis">
+                            {{education.degree}}</p>
+                        <p class="fs-6 text-secondary fw-normal mb-1">Major: {{education.specialization}}</p>
+                        <p class="mb-0 h5 text-dark-emphasis">{{education.institute.name}} <span
+                                class="fs-6 text-secondary fw-normal ms-3">{{ education.ended_at|date:"Y" }}</span></p>
+                    </div>
+                    <img class="opacity-75" style="height: 75px;" src="{{education.institute.image.url}}">
                 </div>
             </div>
             <hr class="my-2">
-            <div class="card-body pt-0 pb-1 d-flex justify-content-between align-items-center">
+            <!-- <div class="card-body pt-0 pb-1 d-flex justify-content-between align-items-center">
                 <p class="mb-0"><i class="fa-regular fa-circle-check me-2"></i>Built a digital library interface with
                     MEAN stack</p>
                 <div>
@@ -310,18 +233,29 @@
                     <a href="#" class="fa fa-brands circular-tag fa-github bg-light text-dark" title="GitHub"></a>
                     <a href="#" class="fa fa-brands circular-tag fa-bitbucket bg-light text-dark" title="Bitbucket"></a>
                 </div>
-            </div>
-            <div class="card-body pt-0 pb-1 d-flex  justify-content-between align-items-center">
-                <p class="mb-0"><i class="fa-regular fa-circle-check me-2"></i>Researched on Interactive Information
-                    Visualization</p>
-                <div>
+            </div> -->
+            {% for activity in education.education_activities.all%}
+
+            <div class="card-body pt-0 pb-1 mb-1 d-flex justify-content-start align-items-start">
+                <i class="fa-regular fa-circle-check me-2 mt-1"></i>
+                {% if activity.url is None %}
+                <p class="mb-0">{{activity.description}}</p>
+                {% else %}
+                <a class="mb-0 link-secondary link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover"
+                    href="{{activity.url}}">{{activity.description}}</a>
+                {% endif %}
+
+                <!-- <div>
                     <a href="#" class="fa fa-brands circular-tag fa-linkedin-in bg-light text-dark"
                         title="Linked in"></a>
                     <a href="#" class="fa fa-brands circular-tag fa-github bg-light text-dark" title="GitHub"></a>
                     <a href="#" class="fa fa-brands circular-tag fa-bitbucket bg-light text-dark" title="Bitbucket"></a>
-                </div>
+                </div> -->
             </div>
+            {% endfor %}
+
         </div>
     </div>
 </div>
+{% endfor %}
 {% endblock template%}

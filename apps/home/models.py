@@ -44,20 +44,27 @@ class Experience(models.Model):
     created_at = models.DateTimeField(auto_now_add = True)
     updated_at = models.DateTimeField(auto_now = True)
 
-class EducationalInstiture(models.Model):
+class EducationalInstitute(models.Model):
     name = models.CharField(max_length=80)
     image = models.FileField(upload_to ='uploads/')
     created_at = models.DateTimeField(auto_now_add = True)
     updated_at = models.DateTimeField(auto_now = True)
 
+    def __str__(self):
+        return self.name
+
 class Education(models.Model):
     degree = models.CharField(max_length=80)
-    institute = models.ForeignKey(EducationalInstiture, on_delete = models.PROTECT, related_name = 'institutes')
+    specialization = models.CharField(max_length=80, blank=True, default='')
+    institute = models.ForeignKey(EducationalInstitute, on_delete = models.PROTECT, related_name = 'institutes')
     short_summary = models.TextField()
     started_at = models.DateField()
     ended_at = models.DateField(null = True, blank = True)
     created_at = models.DateTimeField(auto_now_add = True)
     updated_at = models.DateTimeField(auto_now = True)
+
+    def __str__(self):
+        return self.degree
 
 class Publication(models.Model):
     title = models.CharField(max_length=80)
