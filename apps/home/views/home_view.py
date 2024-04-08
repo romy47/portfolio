@@ -7,8 +7,8 @@ from apps.home.models import Education, Experience
 class HomeView(View):
     def get(self, request):
         categories = Category.objects.all()
-        educations = Education.objects.all()
-        experiences = Experience.objects.all()
+        educations = Education.objects.all().order_by('-ended_at')
+        experiences = Experience.objects.all().order_by('-started_at')
         return render(
             request,
             'home/home.html',

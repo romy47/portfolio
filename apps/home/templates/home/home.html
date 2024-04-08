@@ -181,6 +181,7 @@
                             {{experience.position}}</p>
                         <p class="fs-6 text-secondary fw-normal mb-1">{{education.specialization}}</p>
                         <p class="mb-0 h5 text-dark-emphasis">{{experience.employer.name}}
+                            <span class="fs-6 text-secondary fw-normal ms-3">{{experience.employer.location}}</span>
                             <span class="fs-6 text-secondary fw-normal ms-3">{{experience.started_at|date:"Y"}} -
                                 {% if experience.ended_at is None %}
                                 Present
