@@ -195,7 +195,7 @@
             </div>
             <hr class="my-2">
             {% for activity in experience.experience_activities.all%}
-            <div class="card-body pt-0 pb-1 mb-1 d-flex justify-content-start align-items-start">
+            <div class="card-body pt-0 pb-1 mb-2 d-flex justify-content-start align-items-start">
                 <i class="fa-regular fa-circle-check me-2 mt-1"></i>
                 {% if activity.url and activity.url.strip %}
                 <a class="mb-0 flex-grow-1 link-secondary link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover"
@@ -203,64 +203,21 @@
                 {% else %}
                 <p class="mb-0 flex-grow-1">{{activity.description}}</p>
                 {% endif %}
-                <div style="min-width: 250px;">
+                {% if activity.programming_tools.all%}
+                <div style="width: 200px;">
                     {% for tool in activity.programming_tools.all%}
                     <span class="badge bg-light border shadow border-dark-subtle text-secondary float-end m-1 mb-0">
                         {{tool.title}}
-                        <!-- <img class="opacity-75" style="height: 40px;" src="{{tool.image.url}}"> -->
                     </span>
                     {% endfor %}
                 </div>
+                {% endif %}
             </div>
             {% endfor %}
         </div>
     </div>
 </div>
 {% endfor %}
-
-<!-- <div class="row">
-    <div class="col-md-3 d-flex flex-column justify-content-between">
-        <p class="display-1 text-opacity-50 fw-bold text-secondary">2019</p>
-        <p class="display-1 text-opacity-50 fw-bold text-secondary">2017</p>
-    </div>
-    <div class="col-md-9 p-3">
-        <div class="card bg-secondary-subtle border-0">
-            <div class="card-body pb-1">
-                <div class="d-flex justify-content-between mb-2">
-                    <p class="mb-0 h3 fw-bold text-dark-emphasis">Junior Software Enginner</p>
-                    <i class="fas fa-database fa-2x"></i>
-                </div>
-                <div class="d-flex justify-content-between">
-                    <p class="mb-0 h5 text-dark-emphasis">Astha IT Research and Consulancy Ltd.</p>
-                    <p class="mb-0 hour">Sept 2017 - August 2019</p>
-                </div>
-            </div>
-            <hr class="my-2">
-            <div class="card-body pt-0 pb-1 d-flex justify-content-between align-items-center">
-                <p class="mb-0"><i class="fa-regular fa-circle-check me-2"></i>Started carreer as a ASP.NET web
-                    application developper</p>
-                <div>
-                    <a href="#" class="fa fa-brands circular-tag fa-linkedin-in bg-light text-dark"
-                        title="Linked in"></a>
-                    <a href="#" class="fa fa-brands circular-tag fa-github bg-light text-dark" title="GitHub"></a>
-                    <a href="#" class="fa fa-brands circular-tag fa-bitbucket bg-light text-dark" title="Bitbucket"></a>
-                </div>
-            </div>
-            <div class="card-body pt-0 pb-1 d-flex  justify-content-between align-items-center">
-                <p class="mb-0"><i class="fa-regular fa-circle-check me-2"></i>Worked as a lead front developer for an
-                    angular app.</p>
-                <div>
-                    <a href="#" class="fa fa-brands circular-tag fa-linkedin-in bg-light text-dark"
-                        title="Linked in"></a>
-                    <a href="#" class="fa fa-brands circular-tag fa-github bg-light text-dark" title="GitHub"></a>
-                    <a href="#" class="fa fa-brands circular-tag fa-bitbucket bg-light text-dark" title="Bitbucket"></a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-</div> -->
-
 <br><br>
 <h3 class="mt-5">Education</h3>
 {% for education in educations %}

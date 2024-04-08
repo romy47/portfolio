@@ -38,6 +38,9 @@ class ExperienceActivity(models.Model):
     created_at = models.DateTimeField(auto_now_add = True)
     updated_at = models.DateTimeField(auto_now = True)
 
+    def __str__(self):
+        return f'{self.experience}: {self.description[:50] if len(self.description)>49 else self.description[:len(self.description)]}' 
+    
 class Experience(models.Model):
     position = models.CharField(max_length=80)
     employer = models.ForeignKey(Employer, on_delete = models.PROTECT, related_name = 'experiences')
