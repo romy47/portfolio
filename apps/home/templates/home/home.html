@@ -257,4 +257,35 @@
     </div>
 </div>
 {% endfor %}
+
+<br><br>
+<h3 class="mt-5">Publictions</h3>
+{% for publication in publications %}
+<div class="row mb-4">
+    <div class="col-md-3 d-flex flex-column justify-content-between py-2">
+        <p class="display-3 text-opacity-50 fw-bold text-secondary">{{ publication.year }}</p>
+    </div>
+    <div class="col-md-9 p-3">
+        <div class="card border-1 shadow">
+            <div class="card-body pb-1">
+                <div class="d-flex justify-content-between">
+                    <div>
+                        <!-- <p class="mb-0 h3 fw-bold text-dark-emphasis"> -->
+                        <a class="mb-0 h5 link-secondary link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover"
+                            href="{{publication.url}}">{{publication.title}}</a>
+                        <!-- </p> -->
+                        <!-- <p class="fs-6 text-secondary fw-normal mb-1">Major: {{education.specialization}}</p> -->
+                        <p class="mb-0 h5 text-dark-emphasis">{{publication.year}}</p>
+                    </div>
+                    <!-- <img class="opacity-75" style="height: 75px;" src="{{education.institute.image.url}}"> -->
+                </div>
+            </div>
+            <hr class="my-2">
+            <div class="card-body pt-0 pb-1 mb-1 d-flex justify-content-start align-items-start">
+                <p class="mb-0">{{publication.description}}</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endfor %}
 {% endblock template%}

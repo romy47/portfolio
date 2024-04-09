@@ -76,10 +76,13 @@ class Education(models.Model):
         return self.degree
 
 class Publication(models.Model):
-    title = models.CharField(max_length=80)
-    description = models.TextField()
-    projects = models.ManyToManyField('portfolioproject.Project')
+    title = models.CharField(max_length=300)
+    year = models.IntegerField(blank = True, null=True)
+    description = models.TextField(blank = True, default = '')
     url = models.URLField(blank = True, default = '')
     is_featured = models.BooleanField(default = False)
     created_at = models.DateTimeField(auto_now_add = True)
     updated_at = models.DateTimeField(auto_now = True)
+
+    def __str__(self):
+        return (self.title[:50]+'...') if len(self.title)>49 else self.title[:len(self.title)] 
