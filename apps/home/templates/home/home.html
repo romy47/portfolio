@@ -18,36 +18,29 @@
 <br><br>
 <h3 class="mt-5">Skills</h3>
 <div class="row">
-    {% for category in categories %}
-    <div class="col-md-4 p-3">
-        <div class="card border-1">
-            <div class="card-body pb-0">
+    {% for category in skill_categories %}
+    <div class="col-md-3 p-3">
+        <div class="card border-1 shadow">
+            <div class="card-header">
                 <div class="d-flex justify-content-between align-items-center">
                     <p class="mb-0 h5">{{category.title}}</p>
                     <img style="max-height: 40px;" src="{{category.image.url}}">
                 </div>
             </div>
-            <hr>
-            <div class="card-body pt-0 d-flex">
-                <i class="fa-solid fa-server me-2 mt-1"></i>
+            <div class="card-body">
+                {% for skill in category.personal_skills.all %}
                 <div>
-                    <h6 class="font-weight-bold mb-1"></i>Mongo DB</h6>
-                    <p class="mb-0">5 Projects, 3 Work Experiences</p>
+                    <h6 class="font-weight-bold"></i>{{skill}}</h6>
+                    <p class="mb-0">{{skill.subtitle}}</p>
                 </div>
-            </div>
-            <div class="card-body pt-0 d-flex">
-                <i class="fa-brands fa-bitcoin me-2 mt-1"></i>
-                <div>
-                    <h6 class="font-weight-bold mb-1"></i>PostGres SQL</h6>
-                    <p class="mb-0">5 Projects, 3 Work Experiences</p>
-                </div>
+                {% endfor %}
             </div>
         </div>
     </div>
     {% endfor %}
 </div>
 
-<br><br>
+<!-- <br><br>
 <h3 class="mt-5">Projects</h3>
 <div class="row">
     <div class="col-md-4 p-3">
@@ -149,7 +142,7 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 
 <br><br>
 <h3 class="mt-5">Experiences</h3>

@@ -89,4 +89,21 @@ class Publication(models.Model):
     updated_at = models.DateTimeField(auto_now = True)
 
     def __str__(self):
-        return (self.title[:50]+'...') if len(self.title)>49 else self.title[:len(self.title)] 
+        return (self.title[:50]+'...') if len(self.title)>49 else self.title[:len(self.title)]
+    
+class PersonalSkill(models.Model):
+    category = models.ForeignKey('programming.Category', on_delete=models.PROTECT, related_name = 'personal_skills')
+    title = models.CharField(max_length=300, blank = True, default='')
+    programming_tool = models.ForeignKey('programming.ProgrammingTool', related_name = 'presentation_skills', null=True, blank=True, on_delete=models.CASCADE)
+    subtitle = models.CharField(max_length=300, blank = True, default='')
+    created_at = models.DateTimeField(auto_now_add = True)
+    updated_at = models.DateTimeField(auto_now = True)
+
+    def __str__(self):
+        return  self.title or self.programming_tool.title
+    
+    def experience_count(self):
+        count = 0
+        if(self.programming_tool):
+            count = len(self.programming_tool.experience_activities.all())
+        return  count

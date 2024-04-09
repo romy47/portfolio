@@ -10,6 +10,7 @@ admin.site.register(
         Experience,
         EducationalInstitute,
         Education,
-        Publication
+        Publication,
+        PersonalSkill
     ]
 )
