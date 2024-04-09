@@ -1,8 +1,9 @@
 from django.db import models
 
 class Profile(models.Model):
-    first_name = models.CharField(max_length=20)
-    last_name = models.CharField(max_length=20)
+    first_name = models.CharField(max_length=20, blank = True, default = '')
+    last_name = models.CharField(max_length=20, blank = True, default = '')
+    location = models.CharField(max_length=40, blank = True, default = '')
     email = models.EmailField()
     short_bio = models.CharField(max_length=80)
     about_me = models.TextField()
@@ -10,6 +11,9 @@ class Profile(models.Model):
     created_at = models.DateTimeField(auto_now_add = True)
     updated_at = models.DateTimeField(auto_now = True)
 
+    def __str__(self):
+        return f'{self.first_name} {self.last_name}' 
+    
 class Employer(models.Model):
     name = models.CharField(max_length=80)
     location = models.CharField(max_length=80)
