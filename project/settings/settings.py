@@ -26,7 +26,8 @@ INSTALLED_APPS = [
     'apps.blog',
     'apps.home',
     'apps.portfolioproject',
-    'apps.programming'
+    'apps.programming',
+    'ckeditor'
 ]
 
 MIDDLEWARE = [
@@ -118,3 +119,11 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 IS_DEV = os.environ.get('IS_DEV')=='True'
+
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': 'full',
+        'height': 300,
+        'width': 300,
+    },
+}

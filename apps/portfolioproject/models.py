@@ -1,10 +1,10 @@
 from django.db import models
-
+from ckeditor.fields import RichTextField
 class Project(models.Model):
     title = models.CharField(max_length=80)
     sub_title = models.CharField(blank=True, default='', max_length=120)
     image = models.FileField(upload_to ='uploads/')
-    description = models.TextField(blank=True, default='')
+    description = RichTextField(blank=True, default='')
     programming_tools = models.ManyToManyField('programming.ProgrammingTool', through='portfolioproject.ProjectTool')
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
