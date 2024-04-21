@@ -30,6 +30,14 @@ body {
     width: 26%;
 }
 
+.bx-wrapper {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: 0;
+    padding: 0 45px;
+}
+
 /*  Home Ends    *******************************        */
 
 
