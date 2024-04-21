@@ -150,13 +150,14 @@
 {% for experience in experiences %}
 <div class="row mb-4">
     <div class="col-md-3 d-flex flex-column justify-content-between py-2">
-        <p class="display-3 text-opacity-50 fw-bold text-secondary">
+        <p class="display-3 text-opacity-50 fw-bold text-secondary mb-1">
             {% if experience.ended_at is None %}
             Present
             {% else %}
             {{ experience.ended_at|date:"Y" }}
             {% endif %}
         </p>
+        <div class="flex-grow-1 year-divider"></div>
         <p class="display-3 text-opacity-50 fw-bold text-secondary">{{ experience.started_at|date:"Y" }}</p>
     </div>
     <div class="col-md-9 p-3">
@@ -211,7 +212,8 @@
 {% for education in educations %}
 <div class="row mb-4">
     <div class="col-md-3 d-flex flex-column justify-content-between py-2">
-        <p class="display-3 text-opacity-50 fw-bold text-secondary">{{ education.ended_at|date:"Y" }}</p>
+        <p class="display-3 text-opacity-50 fw-bold text-secondary mb-1">{{ education.ended_at|date:"Y" }}</p>
+        <div class="flex-grow-1 year-divider"></div>
         <p class="display-3 text-opacity-50 fw-bold text-secondary">{{ education.started_at|date:"Y" }}</p>
     </div>
     <div class="col-md-9 p-3">

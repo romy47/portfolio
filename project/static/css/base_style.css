@@ -25,6 +25,11 @@ body {
     border-radius: 50%;
 }
 
+.year-divider {
+    border-right: 1px solid #DEE2E6;
+    width: 26%;
+}
+
 /*  Home Ends    *******************************        */
 
 
