@@ -5,7 +5,8 @@ from .models import *
 admin.site.register(
     [
         Project,
-        ProjectTool
+        ProjectTool,
+        ProjectHighlights
     ]
 )
 
