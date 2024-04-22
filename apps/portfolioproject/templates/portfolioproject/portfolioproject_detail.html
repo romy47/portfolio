@@ -7,25 +7,22 @@
         <li class="breadcrumb-item active" aria-current="page">Project Title</li>
     </ol>
 </nav>
-<div class="card border shadow">
-    <div style="background-image: url('data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=='); width: 100%; height: 350px;"
+<div class="card border shadow p-4">
+    <div style="background-image: url('{{project.image.url}}'); width: 100%; height: 350px;background-size: contain;background-position: center;background-repeat: no-repeat;"
         class="card-img-top"></div>
-    <div class="card-img-overlay text-light d-flex flex-column justify-content-between" style="height: 350px;">
-        <p class="h3 card-title fw-bold mt-2 ms-2">Project Title</p>
-        <div>
-            <p class="card-text mt-2 ms-2">A short summary of what this project is about and how it was built
-            </p>
-            <span class="badge badge-light border"> Angular </span>
-            <span class="badge badge-light border"> Node.js </span>
-            <span class="badge badge-light border"> Mongo DB </span>
-        </div>
-    </div>
     <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="mb-0 d-flex align-items-start"><i class="fa-regular fa-circle-check me-2 mt-1"></i>Used
-            Angular as frontend framework</p>
-        <p class="mb-0 d-flex align-items-start"><i class="fa-regular fa-circle-check me-2 mt-1"></i>Node.js as
-            backend framework</p>
+        <p class="display-5 card-title fw-bold mt-2 mb-0 ms-2">{{project.title}}</p>
+        <p class="fs-4 card-text mt-1 ms-2">{{project.sub_title}}
+        </p>
+        <div class="mb-3">
+            <span class="badge text-secondary border fs-6"> Angular </span>
+            <span class="badge text-secondary border fs-6"> Node.js </span>
+            <span class="badge text-secondary border fs-6"> Mongo DB </span>
+        </div>
+        {% for highlight in project.project_highlights.all %}
+        <p class="mb-0 d-flex align-items-start"><i class="fa-regular fa-circle-check me-2 mt-1"></i>
+            {{highlight.description}}</p>
+        {% endfor %}
     </div>
 </div>
 {% endblock template%}

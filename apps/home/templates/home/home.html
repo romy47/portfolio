@@ -15,7 +15,7 @@
         </div>
     </div>
 </div>
-<br><br>
+<br id="skill"><br>
 <h3 class="mt-5">Skills</h3>
 <div class="row">
     {% for category in skill_categories %}
@@ -39,21 +39,24 @@
     </div>
     {% endfor %}
 </div>
-
-<br><br>
+<br id="project"><br>
+<br>
+{% if projects.count > 0 %}
 <h3 class="mt-5">Projects
     <a class="btn btn-outline-secondary ms-3 fw-medium" href="projects">View All <i
             class="fa-solid fa-arrow-right ms-2"></i></a>
 </h3>
 <div class="row bxslider">
+    {% for project in projects %}
     <div class="col-md-4 p-3">
-        <div class="card border shadow">
-            <div style="background-image: url('data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=='); width: 100%; height: 250px;"
+        <div class="card border-2 shadow">
+            <div style="background-image: url('{{project.image.url}}'); width: 100%; height: 250px;background-size: contain;background-position: center;background-repeat: no-repeat;"
                 class="card-img-top"></div>
-            <div class="card-img-overlay text-light d-flex flex-column justify-content-between" style="height: 250px;">
-                <p class="h3 card-title fw-bold mt-2 ms-2">Project Title</p>
+            <div class="card-img-overlay bg-overlay text-light d-flex flex-column justify-content-end"
+                style="height: 250px;">
+                <p class="h3 card-title fw-bold mt-2 mb-0 ms-2">{{project.title}}</p>
                 <div>
-                    <p class="card-text mt-2 ms-2">A short summary of what this project is about and how it was built
+                    <p class="card-text mt-1 ms-2">{{project.sub_title}}
                     </p>
                     <span class="badge badge-light border"> Angular </span>
                     <span class="badge badge-light border"> Node.js </span>
@@ -61,90 +64,22 @@
                 </div>
             </div>
             <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="mb-0 d-flex align-items-start"><i class="fa-regular fa-circle-check me-2 mt-1"></i>Used
-                    Angular as frontend framework</p>
-                <p class="mb-0 d-flex align-items-start"><i class="fa-regular fa-circle-check me-2 mt-1"></i>Node.js as
-                    backend framework</p>
-                <a href="projects/123" class="btn btn-sm btn-outline-secondary mt-2 float-end">View Details</a>
+                {% for highlight in project.project_highlights.all %}
+                <p class="mb-0 d-flex align-items-start text-sm"><i class="fa-regular fa-circle-check me-2 mt-1"></i>
+                    {{highlight.description}}</p>
+                {% endfor %}
+                <a href="projects/{{project.id}}"
+                    class="btn btn-sm btn-outline-secondary mt-2 float-end stretched-link">View
+                    Details</a>
             </div>
         </div>
     </div>
-    <div class="col-md-4 p-3">
-        <div class="card border shadow">
-            <div style="background-image: url('data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=='); width: 100%; height: 250px;"
-                class="card-img-top"></div>
-            <div class="card-img-overlay text-light d-flex flex-column justify-content-between" style="height: 250px;">
-                <p class="h3 card-title fw-bold mt-2 ms-2">Project Title</p>
-                <div>
-                    <p class="card-text mt-2 ms-2">A short summary of what this project is about and how it was built
-                    </p>
-                    <span class="badge badge-light border"> Angular </span>
-                    <span class="badge badge-light border"> Node.js </span>
-                    <span class="badge badge-light border"> Mongo DB </span>
-                </div>
-            </div>
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="mb-0 d-flex align-items-start"><i class="fa-regular fa-circle-check me-2 mt-1"></i>Used
-                    Angular as frontend framework</p>
-                <p class="mb-0 d-flex align-items-start"><i class="fa-regular fa-circle-check me-2 mt-1"></i>Node.js as
-                    backend framework</p>
-                <a href="projects/123" class="btn btn-sm btn-outline-secondary mt-2 float-end">View Details</a>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-4 p-3">
-        <div class="card border shadow">
-            <div style="background-image: url('data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=='); width: 100%; height: 250px;"
-                class="card-img-top"></div>
-            <div class="card-img-overlay text-light d-flex flex-column justify-content-between" style="height: 250px;">
-                <p class="h3 card-title fw-bold mt-2 ms-2">Project Title</p>
-                <div>
-                    <p class="card-text mt-2 ms-2">A short summary of what this project is about and how it was built
-                    </p>
-                    <span class="badge badge-light border"> Angular </span>
-                    <span class="badge badge-light border"> Node.js </span>
-                    <span class="badge badge-light border"> Mongo DB </span>
-                </div>
-            </div>
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="mb-0 d-flex align-items-start"><i class="fa-regular fa-circle-check me-2 mt-1"></i>Used
-                    Angular as frontend framework</p>
-                <p class="mb-0 d-flex align-items-start"><i class="fa-regular fa-circle-check me-2 mt-1"></i>Node.js as
-                    backend framework</p>
-                <a href="projects/123" class="btn btn-sm btn-outline-secondary mt-2 float-end">View Details</a>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-4 p-3">
-        <div class="card border shadow">
-            <div style="background-image: url('data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=='); width: 100%; height: 250px;"
-                class="card-img-top"></div>
-            <div class="card-img-overlay text-light d-flex flex-column justify-content-between" style="height: 250px;">
-                <p class="h3 card-title fw-bold mt-2 ms-2">Project Title</p>
-                <div>
-                    <p class="card-text mt-2 ms-2">A short summary of what this project is about and how it was built
-                    </p>
-                    <span class="badge badge-light border"> Angular </span>
-                    <span class="badge badge-light border"> Node.js </span>
-                    <span class="badge badge-light border"> Mongo DB </span>
-                </div>
-            </div>
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="mb-0 d-flex align-items-start"><i class="fa-regular fa-circle-check me-2 mt-1"></i>Used
-                    Angular as frontend framework</p>
-                <p class="mb-0 d-flex align-items-start"><i class="fa-regular fa-circle-check me-2 mt-1"></i>Node.js as
-                    backend framework</p>
-                <a href="projects/123" class="btn btn-sm btn-outline-secondary mt-2 float-end">View Details</a>
-            </div>
-        </div>
-    </div>
+    {% endfor %}
 </div>
+{% endif %}
 
-<br><br>
+<br id="experience"><br>
+<br>
 <h3 class="mt-5">Experiences</h3>
 
 {% for experience in experiences %}
@@ -207,7 +142,8 @@
     </div>
 </div>
 {% endfor %}
-<br><br>
+<br id="education"><br>
+<br>
 <h3 class="mt-5">Education</h3>
 {% for education in educations %}
 <div class="row mb-4">
@@ -247,7 +183,8 @@
 </div>
 {% endfor %}
 
-<br><br>
+<br id="publication"><br>
+<br>
 <h3 class="mt-5">Publictions</h3>
 {% for publication in publications %}
 <div class="row mb-4">

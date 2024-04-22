@@ -1,7 +1,15 @@
 from django.http import HttpResponse
 from django.shortcuts import render
 from django.views import View
+from apps.portfolioproject.models import Project
 
 class PortfolioProjectView(View):
     def get(self, request):
-        return render(request, template_name = 'portfolioproject/portfolioproject.html')
+        projects = Project.objects.all()
+        return render(
+            request,
+            'portfolioproject/portfolioproject.html',
+                {
+                    'projects': projects
+                }
+            )
