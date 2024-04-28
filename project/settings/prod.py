@@ -1,5 +1,5 @@
 from .settings import *
-
+import os
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 ALLOWED_HOSTS = ['54.163.42.137']
@@ -13,3 +13,5 @@ DATABASES = {
         'PORT': '5432',
     }
 }
+
+STATIC_ROOT  = os.path.join(BASE_DIR, 'deployment', 'collected_static')
