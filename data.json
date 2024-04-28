@@ -1,0 +1,2479 @@
+[
+{
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+        "password": "pbkdf2_sha256$720000$Ow4bMG8VZUwTSv6drWeTqS$7QPkyhD0125qr7MsAOynNFRKwUgiL4TzcwV4R10k4Io=",
+        "last_login": "2024-04-09T04:49:26.100Z",
+        "is_superuser": true,
+        "username": "sgomes.cs@gmail.com",
+        "first_name": "",
+        "last_name": "",
+        "email": "sgomes.cs@gmail.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2024-04-05T03:37:56.566Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "hpnqdtapobfjs8x4k2oimixcnp2u4ghl",
+    "fields": {
+        "session_data": ".eJxVjDsOwjAQBe_iGll2Phubkj5niN7uGhJAtpRPhbg7REoB7ZuZ9zIDtnUctiXNw6TmbLw5_W4MeaS8A70j34qVktd5Yrsr9qCL7Yum5-Vw_w5GLOO3rhkcSSKq2HoPIFw5VrXUTSdwFJrWoQWpJ1HXJQ6kmhyUEXx0Qub9AfOuOHs:1ru3QE:tdlsg9yF9vJtCNXXqqktOQzfr4c8Cf6qkKuePmqlaJM",
+        "expire_date": "2024-04-23T04:49:26.108Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "pi8s0itxb6aq41oww2j37952adhfcu1c",
+    "fields": {
+        "session_data": ".eJxVjDsOwjAQBe_iGll2Phubkj5niN7uGhJAtpRPhbg7REoB7ZuZ9zIDtnUctiXNw6TmbLw5_W4MeaS8A70j34qVktd5Yrsr9qCL7Yum5-Vw_w5GLOO3rhkcSSKq2HoPIFw5VrXUTSdwFJrWoQWpJ1HXJQ6kmhyUEXx0Qub9AfOuOHs:1rsaPJ:Jnl8ALMwWMiTCKA-PLfge45KBU3otzX0apbX1xamK-s",
+        "expire_date": "2024-04-19T03:38:25.223Z"
+    }
+},
+{
+    "model": "home.profile",
+    "pk": 1,
+    "fields": {
+        "first_name": "Sebastian",
+        "last_name": "Gomes",
+        "location": "Saskatoon, Canada",
+        "email": "sgomes.cs@gmail.com",
+        "short_bio": "Application Developer and Visualization Enthusuaist",
+        "about_me": "I'm an experienced application developer specializing in the Django framework, with a background in Angular and ASP.NET frameworks. My passion lies in creating interactive visualizations and designing user experiences that are intuitive and engaging. I enjoy leveraging my technical skills to develop robust and user-friendly applications that meet the needs of clients and users alike.",
+        "image": "uploads/avatar_grayscale.png",
+        "created_at": "2024-04-09T04:07:11.367Z",
+        "updated_at": "2024-04-09T04:53:36.528Z"
+    }
+},
+{
+    "model": "home.employer",
+    "pk": 1,
+    "fields": {
+        "name": "Astha IT",
+        "location": "Dhaka, Bangladesh",
+        "image": "uploads/Astha-IT-Logo.jpg",
+        "website": "https://www.asthait.com/",
+        "created_at": "2024-04-07T02:55:31.270Z",
+        "updated_at": "2024-04-07T02:55:31.270Z"
+    }
+},
+{
+    "model": "home.employer",
+    "pk": 2,
+    "fields": {
+        "name": "Quadrant Newmedia Corp",
+        "location": "Saskatoon, Canada",
+        "image": "uploads/qnclogo.svg",
+        "website": "https://quadrant.net/",
+        "created_at": "2024-04-07T02:56:36.783Z",
+        "updated_at": "2024-04-07T02:56:36.783Z"
+    }
+},
+{
+    "model": "home.employer",
+    "pk": 3,
+    "fields": {
+        "name": "University of Regina",
+        "location": "Regina, Canada",
+        "image": "uploads/UR_Logo_Primary_Full_COlour_RGB_P7eohlq.png",
+        "website": "",
+        "created_at": "2024-04-07T07:04:07.439Z",
+        "updated_at": "2024-04-07T07:04:07.439Z"
+    }
+},
+{
+    "model": "home.educationactivity",
+    "pk": 1,
+    "fields": {
+        "description": "I did my thesis on email classification using machine learning and NLP techniques. I published my work in an IEEE conference.",
+        "education": 1,
+        "url": "https://ieeexplore.ieee.org/abstract/document/8255404/",
+        "is_featured": false,
+        "created_at": "2024-04-07T01:56:40.734Z",
+        "updated_at": "2024-04-07T01:56:40.734Z"
+    }
+},
+{
+    "model": "home.educationactivity",
+    "pk": 2,
+    "fields": {
+        "description": "For a computer interfacing course project, I built a headset with a webcam for tracking pupil movement. The webcam feed is processed for different eye gestures for sending SMS.",
+        "education": 1,
+        "url": "https://youtu.be/GIzVkox4dlQ?si=sBVBbxsRiFuLvTFV",
+        "is_featured": false,
+        "created_at": "2024-04-07T02:04:55.075Z",
+        "updated_at": "2024-04-07T02:04:55.076Z"
+    }
+},
+{
+    "model": "home.educationactivity",
+    "pk": 3,
+    "fields": {
+        "description": "My thesis was about learning academic search behaviour and helping searchers to improve their search experience.",
+        "education": 2,
+        "url": "",
+        "is_featured": false,
+        "created_at": "2024-04-07T02:29:31.085Z",
+        "updated_at": "2024-04-07T02:33:26.424Z"
+    }
+},
+{
+    "model": "home.educationactivity",
+    "pk": 4,
+    "fields": {
+        "description": "I built DILEX which assists searchers in resuming a search task after taking a prolonged break. It does that with various novel visualization techniques and UX design. I published a short paper explaining the design and architecture of the app.",
+        "education": 2,
+        "url": "https://search.proquest.com/openview/00ff8cf765d18b5df85a649144a4e710/1?pq-origsite=gscholar&cbl=18750&diss=y",
+        "is_featured": false,
+        "created_at": "2024-04-07T02:35:43.698Z",
+        "updated_at": "2024-04-07T02:35:43.698Z"
+    }
+},
+{
+    "model": "home.educationactivity",
+    "pk": 5,
+    "fields": {
+        "description": "I ran a user study to compare Dilex with the university digital library with a simulated real-life search scenario. The result is published in an ACM conference.",
+        "education": 2,
+        "url": "https://dl.acm.org/doi/abs/10.1145/3477495.3531929",
+        "is_featured": false,
+        "created_at": "2024-04-07T02:41:37.353Z",
+        "updated_at": "2024-04-07T02:41:37.353Z"
+    }
+},
+{
+    "model": "home.experienceactivity",
+    "pk": 1,
+    "fields": {
+        "description": "Built multiple web applications  with Angular",
+        "experience": 1,
+        "url": "",
+        "is_featured": false,
+        "created_at": "2024-04-07T04:55:47.674Z",
+        "updated_at": "2024-04-07T05:33:11.748Z",
+        "programming_tools": [
+            4
+        ]
+    }
+},
+{
+    "model": "home.experienceactivity",
+    "pk": 2,
+    "fields": {
+        "description": "Worked on an ASP.NET web application which is used by a property management company for managing inventory and tenants",
+        "experience": 1,
+        "url": "",
+        "is_featured": false,
+        "created_at": "2024-04-07T05:35:23.012Z",
+        "updated_at": "2024-04-07T05:35:40.993Z",
+        "programming_tools": [
+            1,
+            2,
+            3
+        ]
+    }
+},
+{
+    "model": "home.experienceactivity",
+    "pk": 3,
+    "fields": {
+        "description": "Building web applications with Django. In many of these projects, working as a lead designer and lead developer.",
+        "experience": 2,
+        "url": "",
+        "is_featured": false,
+        "created_at": "2024-04-07T05:58:15.697Z",
+        "updated_at": "2024-04-07T07:02:28.434Z",
+        "programming_tools": [
+            5,
+            6
+        ]
+    }
+},
+{
+    "model": "home.experienceactivity",
+    "pk": 5,
+    "fields": {
+        "description": "Designed and developped of Dilex. An angular app with Node.js API hosted on the AWS platform.",
+        "experience": 3,
+        "url": "",
+        "is_featured": false,
+        "created_at": "2024-04-07T06:50:00.446Z",
+        "updated_at": "2024-04-07T22:55:02.915Z",
+        "programming_tools": [
+            4,
+            7,
+            8,
+            9
+        ]
+    }
+},
+{
+    "model": "home.experienceactivity",
+    "pk": 6,
+    "fields": {
+        "description": "Course Instructor of an undergrad course (CS215) for three semesters. I taught web designing, web development basics (HTML, CSS, JavaScript), and database (SQL) programming.",
+        "experience": 3,
+        "url": "",
+        "is_featured": false,
+        "created_at": "2024-04-07T07:13:19.036Z",
+        "updated_at": "2024-04-07T07:14:30.671Z",
+        "programming_tools": []
+    }
+},
+{
+    "model": "home.experienceactivity",
+    "pk": 7,
+    "fields": {
+        "description": "Worked as a full-time research assistant. My research topics included: Information seeking behaviour, Interactive Information Retrieval, UX design, and Information Visualization",
+        "experience": 3,
+        "url": "",
+        "is_featured": false,
+        "created_at": "2024-04-07T07:17:25.859Z",
+        "updated_at": "2024-04-07T07:18:16.793Z",
+        "programming_tools": []
+    }
+},
+{
+    "model": "home.experienceactivity",
+    "pk": 8,
+    "fields": {
+        "description": "Written web scraper for categorically scraping school curriculum of various provinces, grades, and subjects into a relational database for a large-scale e-learning platform.",
+        "experience": 2,
+        "url": "",
+        "is_featured": false,
+        "created_at": "2024-04-07T22:59:09.202Z",
+        "updated_at": "2024-04-07T22:59:09.202Z",
+        "programming_tools": [
+            6,
+            10
+        ]
+    }
+},
+{
+    "model": "home.experienceactivity",
+    "pk": 9,
+    "fields": {
+        "description": "Collected user interaction data of an angular app (Dilex) with JS, stored in MongoDB by web socket channel through a node API. This data was preprocessed with Python and statistical analysis was conducted using R.",
+        "experience": 3,
+        "url": "",
+        "is_featured": false,
+        "created_at": "2024-04-07T23:22:54.936Z",
+        "updated_at": "2024-04-07T23:22:54.936Z",
+        "programming_tools": [
+            7,
+            9,
+            10,
+            11
+        ]
+    }
+},
+{
+    "model": "home.experience",
+    "pk": 1,
+    "fields": {
+        "position": "Junior Software Engineer",
+        "employer": 1,
+        "short_summary": "I worked as a junior software engineer for two years",
+        "started_at": "2017-09-01",
+        "ended_at": "2019-08-11",
+        "created_at": "2024-04-07T03:01:04.306Z",
+        "updated_at": "2024-04-07T03:01:04.306Z"
+    }
+},
+{
+    "model": "home.experience",
+    "pk": 2,
+    "fields": {
+        "position": "Application Developer",
+        "employer": 2,
+        "short_summary": "I am working as an application developer",
+        "started_at": "2022-07-01",
+        "ended_at": null,
+        "created_at": "2024-04-07T03:01:59.887Z",
+        "updated_at": "2024-04-07T03:01:59.887Z"
+    }
+},
+{
+    "model": "home.experience",
+    "pk": 3,
+    "fields": {
+        "position": "Course Instructor  |  Grad Research Assistant",
+        "employer": 3,
+        "short_summary": "Course Instructor of Web and Database Programming Course",
+        "started_at": "2019-09-01",
+        "ended_at": "2022-05-30",
+        "created_at": "2024-04-07T07:07:44.108Z",
+        "updated_at": "2024-04-21T06:59:58.612Z"
+    }
+},
+{
+    "model": "home.educationalinstitute",
+    "pk": 1,
+    "fields": {
+        "name": "BRAC University",
+        "image": "uploads/bracu_logo.webp",
+        "created_at": "2024-04-06T23:56:21.074Z",
+        "updated_at": "2024-04-06T23:56:21.074Z"
+    }
+},
+{
+    "model": "home.educationalinstitute",
+    "pk": 2,
+    "fields": {
+        "name": "University of Regina",
+        "image": "uploads/UR_Logo_Primary_Full_COlour_RGB.png",
+        "created_at": "2024-04-06T23:58:44.821Z",
+        "updated_at": "2024-04-06T23:58:44.821Z"
+    }
+},
+{
+    "model": "home.education",
+    "pk": 1,
+    "fields": {
+        "degree": "Bachelor of Science",
+        "specialization": "Computer Science and Engineering",
+        "institute": 1,
+        "short_summary": "My thesis was on email classification using NLP and this work is published in an IEEE coneference.",
+        "started_at": "2013-01-01",
+        "ended_at": "2017-08-30",
+        "created_at": "2024-04-07T00:20:04.292Z",
+        "updated_at": "2024-04-07T00:20:04.292Z"
+    }
+},
+{
+    "model": "home.education",
+    "pk": 2,
+    "fields": {
+        "degree": "Master of Science",
+        "specialization": "CS (thesis)",
+        "institute": 2,
+        "short_summary": "I researched on Information visualization and Interactive Information Retrieval with Dr. Orland Hoeber. I have developed an intuitive digital library search interface and published two research papers in ACM conferences.",
+        "started_at": "2019-09-01",
+        "ended_at": "2022-06-01",
+        "created_at": "2024-04-07T00:28:46.132Z",
+        "updated_at": "2024-04-07T00:28:46.132Z"
+    }
+},
+{
+    "model": "home.publication",
+    "pk": 1,
+    "fields": {
+        "title": "A comparative approach to email classification using Naive Bayes classifier and hidden Markov model",
+        "year": 2017,
+        "description": "This research investigates a comparison between two different approaches for classifying emails based on their categories. Naive Bayes and Hidden Markov Model (HMM), two machine learning algorithms, have been used to detect whether an email is important or spam. Various combinations of NLP techniques- stopwords removing, stemming, and lemmatizing have been tried on both algorithms to inspect the differences in accuracy and find the best method.",
+        "url": "https://ieeexplore.ieee.org/abstract/document/8255404/",
+        "is_featured": false,
+        "created_at": "2024-04-09T03:03:00.923Z",
+        "updated_at": "2024-04-09T03:03:00.923Z"
+    }
+},
+{
+    "model": "home.publication",
+    "pk": 2,
+    "fields": {
+        "title": "Email classification and meeting scheduling using classifier algorithm",
+        "year": 2017,
+        "description": "Along with classifying emails, this paper also describes the methodologies used for automatic meeting scheduling by an intelligent email assistant. Users who regularly send or receive messages for setting up meetings will greatly benefit from this system as it will classify their emails and schedule their meetings automatically.",
+        "url": "http://dspace.bracu.ac.bd/xmlui/handle/10361/8116",
+        "is_featured": false,
+        "created_at": "2024-04-09T03:04:34.515Z",
+        "updated_at": "2024-04-09T03:04:34.515Z"
+    }
+},
+{
+    "model": "home.publication",
+    "pk": 3,
+    "fields": {
+        "title": "Supporting cross-session cross-device search in an academic digital library",
+        "year": 2021,
+        "description": "Complex academic search tasks often span multiple sessions and devices, posing challenges for task resumption. Effective support for resuming tasks on mobile devices can utilize downtime effectively, while desktop/laptop support enables seamless access to mobile work. Our paper introduces an academic search interface facilitating cross-session, cross-device search using visualizations for browsing past topics and faceted navigation for examining saved documents. This approach optimizes search continuity and accessibility across varied environments and devices.",
+        "url": "https://dl.acm.org/doi/abs/10.1145/3406522.3446055",
+        "is_featured": false,
+        "created_at": "2024-04-09T03:06:43.164Z",
+        "updated_at": "2024-04-09T03:23:44.536Z"
+    }
+},
+{
+    "model": "home.publication",
+    "pk": 4,
+    "fields": {
+        "title": "A study of cross-session cross-device search within an academic digital library",
+        "year": 2022,
+        "description": "We've built an academic digital library search interface called Dilex, aiding users in managing search tasks across mobile and desktop devices. In a controlled study, we compared Dilex to a standard academic search interface, finding increased user engagement and interaction with search results and personalization features. Participants spent more time on search result pages and showed enhanced engagement during resumed tasks. These results demonstrate the effectiveness of Dilex's visualization features in supporting cross-session search tasks and user engagement. This study showcases how semi-automatic task management and visualization can facilitate seamless cross-device search experiences.",
+        "url": "https://dl.acm.org/doi/abs/10.1145/3477495.3531929",
+        "is_featured": false,
+        "created_at": "2024-04-09T03:08:10.009Z",
+        "updated_at": "2024-04-09T03:23:17.685Z"
+    }
+},
+{
+    "model": "home.publication",
+    "pk": 5,
+    "fields": {
+        "title": "Visual Keyword/Result Linking: Using Interaction to Dynamically Reveal Relationships",
+        "year": 2024,
+        "description": "In this study, we propose a new method that aggregates keywords across a search engine results page (SERP), linking them visually to their source results. We created interactive and static interfaces, conducting a lab study to gauge their impact on utility and perceived value. The results highlight the effectiveness of using interactive keywords and visualization to summarize and link search results. Interestingly, whether keywords are shown alongside each result or aggregated over the entire SERP has minimal impact, emphasizing the importance of their interactive use in revealing relationships among search results.",
+        "url": "https://dl.acm.org/doi/abs/10.1145/3627508.3638307",
+        "is_featured": false,
+        "created_at": "2024-04-09T03:09:35.117Z",
+        "updated_at": "2024-04-09T03:22:34.246Z"
+    }
+},
+{
+    "model": "home.personalskill",
+    "pk": 1,
+    "fields": {
+        "category": 3,
+        "title": "",
+        "programming_tool": 9,
+        "subtitle": "",
+        "created_at": "2024-04-09T06:09:45.907Z",
+        "updated_at": "2024-04-09T06:09:45.907Z"
+    }
+},
+{
+    "model": "home.personalskill",
+    "pk": 2,
+    "fields": {
+        "category": 3,
+        "title": "",
+        "programming_tool": 6,
+        "subtitle": "",
+        "created_at": "2024-04-09T06:10:46.016Z",
+        "updated_at": "2024-04-09T06:10:46.016Z"
+    }
+},
+{
+    "model": "home.personalskill",
+    "pk": 3,
+    "fields": {
+        "category": 3,
+        "title": "",
+        "programming_tool": 3,
+        "subtitle": "",
+        "created_at": "2024-04-09T06:10:58.771Z",
+        "updated_at": "2024-04-09T06:10:58.771Z"
+    }
+},
+{
+    "model": "home.personalskill",
+    "pk": 4,
+    "fields": {
+        "category": 1,
+        "title": "",
+        "programming_tool": 4,
+        "subtitle": "",
+        "created_at": "2024-04-09T06:13:19.624Z",
+        "updated_at": "2024-04-09T06:13:19.624Z"
+    }
+},
+{
+    "model": "home.personalskill",
+    "pk": 5,
+    "fields": {
+        "category": 1,
+        "title": "",
+        "programming_tool": 2,
+        "subtitle": "",
+        "created_at": "2024-04-09T06:13:41.917Z",
+        "updated_at": "2024-04-09T06:13:41.917Z"
+    }
+},
+{
+    "model": "home.personalskill",
+    "pk": 6,
+    "fields": {
+        "category": 1,
+        "title": "",
+        "programming_tool": 12,
+        "subtitle": "",
+        "created_at": "2024-04-09T06:16:32.854Z",
+        "updated_at": "2024-04-09T06:16:32.854Z"
+    }
+},
+{
+    "model": "home.personalskill",
+    "pk": 7,
+    "fields": {
+        "category": 2,
+        "title": "",
+        "programming_tool": 7,
+        "subtitle": "",
+        "created_at": "2024-04-09T06:16:55.472Z",
+        "updated_at": "2024-04-09T06:16:55.472Z"
+    }
+},
+{
+    "model": "home.personalskill",
+    "pk": 8,
+    "fields": {
+        "category": 2,
+        "title": "",
+        "programming_tool": 5,
+        "subtitle": "",
+        "created_at": "2024-04-09T06:17:08.471Z",
+        "updated_at": "2024-04-09T06:17:08.471Z"
+    }
+},
+{
+    "model": "home.personalskill",
+    "pk": 9,
+    "fields": {
+        "category": 2,
+        "title": "",
+        "programming_tool": 1,
+        "subtitle": "",
+        "created_at": "2024-04-09T06:17:15.294Z",
+        "updated_at": "2024-04-09T06:17:15.294Z"
+    }
+},
+{
+    "model": "home.personalskill",
+    "pk": 10,
+    "fields": {
+        "category": 4,
+        "title": "",
+        "programming_tool": 10,
+        "subtitle": "",
+        "created_at": "2024-04-09T06:17:28.345Z",
+        "updated_at": "2024-04-09T06:17:28.345Z"
+    }
+},
+{
+    "model": "home.personalskill",
+    "pk": 11,
+    "fields": {
+        "category": 4,
+        "title": "",
+        "programming_tool": 11,
+        "subtitle": "",
+        "created_at": "2024-04-09T06:17:43.438Z",
+        "updated_at": "2024-04-09T06:17:43.438Z"
+    }
+},
+{
+    "model": "portfolioproject.project",
+    "pk": 1,
+    "fields": {
+        "title": "Dilex",
+        "sub_title": "A cross-session academic digital library",
+        "image": "uploads/dilex.png",
+        "description": "",
+        "created_at": "2024-04-22T02:23:53.723Z",
+        "updated_at": "2024-04-22T02:23:53.723Z"
+    }
+},
+{
+    "model": "portfolioproject.projecthighlights",
+    "pk": 1,
+    "fields": {
+        "description": "Unique timeline visualization for assessing past search sessions.",
+        "project": 1,
+        "url": "",
+        "is_featured": false,
+        "created_at": "2024-04-22T03:02:06.109Z",
+        "updated_at": "2024-04-22T04:23:29.276Z"
+    }
+},
+{
+    "model": "portfolioproject.projecthighlights",
+    "pk": 2,
+    "fields": {
+        "description": "Search results and saved documents are organized by tasks.",
+        "project": 1,
+        "url": "",
+        "is_featured": false,
+        "created_at": "2024-04-22T03:03:41.893Z",
+        "updated_at": "2024-04-22T04:23:02.799Z"
+    }
+},
+{
+    "model": "portfolioproject.projecthighlights",
+    "pk": 3,
+    "fields": {
+        "description": "Dynamic topic highlighting when search results are scrolled.",
+        "project": 1,
+        "url": "",
+        "is_featured": false,
+        "created_at": "2024-04-22T04:24:58.419Z",
+        "updated_at": "2024-04-22T04:24:58.419Z"
+    }
+},
+{
+    "model": "portfolioproject.projecttool",
+    "pk": 1,
+    "fields": {
+        "programming_tool": 9,
+        "project": 1,
+        "title": "Database",
+        "sub_title": "",
+        "created_at": "2024-04-22T02:27:58.661Z",
+        "updated_at": "2024-04-22T02:27:58.662Z"
+    }
+},
+{
+    "model": "portfolioproject.projecttool",
+    "pk": 2,
+    "fields": {
+        "programming_tool": 4,
+        "project": 1,
+        "title": "Frontend",
+        "sub_title": "",
+        "created_at": "2024-04-22T02:28:28.504Z",
+        "updated_at": "2024-04-22T02:28:28.504Z"
+    }
+},
+{
+    "model": "portfolioproject.projecttool",
+    "pk": 3,
+    "fields": {
+        "programming_tool": 7,
+        "project": 1,
+        "title": "Backend",
+        "sub_title": "",
+        "created_at": "2024-04-22T02:28:43.769Z",
+        "updated_at": "2024-04-22T02:28:43.769Z"
+    }
+},
+{
+    "model": "portfolioproject.projecttool",
+    "pk": 4,
+    "fields": {
+        "programming_tool": 8,
+        "project": 1,
+        "title": "Hosting",
+        "sub_title": "",
+        "created_at": "2024-04-22T02:29:39.232Z",
+        "updated_at": "2024-04-22T02:29:39.232Z"
+    }
+},
+{
+    "model": "programming.category",
+    "pk": 1,
+    "fields": {
+        "title": "Front-end",
+        "image": "uploads/icons8-laptop-and-phone-64.png",
+        "description": "Front-end programming languages and frameworks",
+        "created_at": "2024-04-05T04:28:59.913Z",
+        "updated_at": "2024-04-05T04:28:59.913Z"
+    }
+},
+{
+    "model": "programming.category",
+    "pk": 2,
+    "fields": {
+        "title": "Back-end",
+        "image": "uploads/icons8-server-64.png",
+        "description": "Back-end frameworks",
+        "created_at": "2024-04-05T04:29:47.065Z",
+        "updated_at": "2024-04-05T04:29:47.065Z"
+    }
+},
+{
+    "model": "programming.category",
+    "pk": 3,
+    "fields": {
+        "title": "Database",
+        "image": "uploads/icons8-database-50.png",
+        "description": "Database languages",
+        "created_at": "2024-04-05T04:30:41.302Z",
+        "updated_at": "2024-04-05T04:30:41.302Z"
+    }
+},
+{
+    "model": "programming.category",
+    "pk": 4,
+    "fields": {
+        "title": "Statistics / Data Mining",
+        "image": "uploads/icons8-statistics-50.png",
+        "description": "Programming languages for data mining, statistical computing or visualization",
+        "created_at": "2024-04-07T23:11:47.218Z",
+        "updated_at": "2024-04-07T23:11:47.218Z"
+    }
+},
+{
+    "model": "programming.programmingtool",
+    "pk": 1,
+    "fields": {
+        "title": "ASP.NET",
+        "image": "uploads/asp.net.logo.png",
+        "description": "A framework for building web applications using C#",
+        "category": 2,
+        "created_at": "2024-04-07T04:59:33.583Z",
+        "updated_at": "2024-04-07T04:59:33.583Z"
+    }
+},
+{
+    "model": "programming.programmingtool",
+    "pk": 2,
+    "fields": {
+        "title": "jQuery",
+        "image": "uploads/free-jquery-225998.webp",
+        "description": "A JavaScript library for building interactive web pages",
+        "category": 1,
+        "created_at": "2024-04-07T05:01:33.405Z",
+        "updated_at": "2024-04-07T05:01:33.405Z"
+    }
+},
+{
+    "model": "programming.programmingtool",
+    "pk": 3,
+    "fields": {
+        "title": "MySQL",
+        "image": "uploads/Mysql_logo.png",
+        "description": "A relational database management application",
+        "category": 3,
+        "created_at": "2024-04-07T05:04:38.309Z",
+        "updated_at": "2024-04-07T05:04:38.309Z"
+    }
+},
+{
+    "model": "programming.programmingtool",
+    "pk": 4,
+    "fields": {
+        "title": "Angular",
+        "image": "uploads/21_Angular_logo_logos-512.webp",
+        "description": "A typescript framework for building single-page web applications",
+        "category": 1,
+        "created_at": "2024-04-07T05:32:55.113Z",
+        "updated_at": "2024-04-07T05:32:55.113Z"
+    }
+},
+{
+    "model": "programming.programmingtool",
+    "pk": 5,
+    "fields": {
+        "title": "Django",
+        "image": "uploads/django.png",
+        "description": "",
+        "category": 2,
+        "created_at": "2024-04-07T05:53:47.217Z",
+        "updated_at": "2024-04-07T05:53:47.217Z"
+    }
+},
+{
+    "model": "programming.programmingtool",
+    "pk": 6,
+    "fields": {
+        "title": "PostgreSQL",
+        "image": "uploads/postgres.png",
+        "description": "A relational database management system",
+        "category": 3,
+        "created_at": "2024-04-07T05:57:16.646Z",
+        "updated_at": "2024-04-07T05:57:16.646Z"
+    }
+},
+{
+    "model": "programming.programmingtool",
+    "pk": 7,
+    "fields": {
+        "title": "Node.js",
+        "image": "uploads/node_js.png",
+        "description": "A JavaScript runtime environment that enables running javascript on a server",
+        "category": 2,
+        "created_at": "2024-04-07T06:39:19.858Z",
+        "updated_at": "2024-04-07T06:39:19.858Z"
+    }
+},
+{
+    "model": "programming.programmingtool",
+    "pk": 8,
+    "fields": {
+        "title": "EC2",
+        "image": "uploads/AWS_EC2.png",
+        "description": "A cloud service for renting virtual computers",
+        "category": 2,
+        "created_at": "2024-04-07T06:45:58.894Z",
+        "updated_at": "2024-04-07T06:45:58.894Z"
+    }
+},
+{
+    "model": "programming.programmingtool",
+    "pk": 9,
+    "fields": {
+        "title": "MongoDB",
+        "image": "uploads/mongodb.png",
+        "description": "A cloud-based NoSQL database",
+        "category": 3,
+        "created_at": "2024-04-07T06:47:30.673Z",
+        "updated_at": "2024-04-07T06:47:30.673Z"
+    }
+},
+{
+    "model": "programming.programmingtool",
+    "pk": 10,
+    "fields": {
+        "title": "Python",
+        "image": "uploads/python.png",
+        "description": "Python programming language",
+        "category": 4,
+        "created_at": "2024-04-07T22:52:31.909Z",
+        "updated_at": "2024-04-07T23:12:02.908Z"
+    }
+},
+{
+    "model": "programming.programmingtool",
+    "pk": 11,
+    "fields": {
+        "title": "R",
+        "image": "uploads/R.jpeg",
+        "description": "A programming language for statistical computing and data visualization",
+        "category": 4,
+        "created_at": "2024-04-07T23:11:51.533Z",
+        "updated_at": "2024-04-07T23:11:51.533Z"
+    }
+},
+{
+    "model": "programming.programmingtool",
+    "pk": 12,
+    "fields": {
+        "title": "JavaScript",
+        "image": "uploads/icons8-javascript-50.png",
+        "description": "A Programming language",
+        "category": 1,
+        "created_at": "2024-04-09T06:16:25.123Z",
+        "updated_at": "2024-04-09T06:16:25.123Z"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+        "action_time": "2024-04-05T04:28:59.915Z",
+        "user": [
+            "sgomes.cs@gmail.com"
+        ],
+        "content_type": [
+            "programming",
+            "category"
+        ],
+        "object_id": "1",
+        "object_repr": "Category object (1)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+        "action_time": "2024-04-05T04:29:47.067Z",
+        "user": [
+            "sgomes.cs@gmail.com"
+        ],
+        "content_type": [
+            "programming",
+            "category"
+        ],
+        "object_id": "2",
+        "object_repr": "Category object (2)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 3,
+    "fields": {
+        "action_time": "2024-04-05T04:30:41.303Z",
+        "user": [
+            "sgomes.cs@gmail.com"
+        ],
+        "content_type": [
+            "programming",
+            "category"
+        ],
+        "object_id": "3",
+        "object_repr": "Category object (3)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 4,
+    "fields": {
+        "action_time": "2024-04-06T23:56:21.077Z",
+        "user": [
+            "sgomes.cs@gmail.com"
+        ],
+        "content_type": [
+            "home",
+            "educationalinstitute"
+        ],
+        "object_id": "1",
+        "object_repr": "EducationalInstitute object (1)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 5,
+    "fields": {
+        "action_time": "2024-04-06T23:58:44.822Z",
+        "user": [
+            "sgomes.cs@gmail.com"
+        ],
+        "content_type": [
+            "home",
+            "educationalinstitute"
+        ],
+        "object_id": "2",
+        "object_repr": "University of Regina",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 6,
+    "fields": {
+        "action_time": "2024-04-07T00:20:04.304Z",
+        "user": [
+            "sgomes.cs@gmail.com"
+        ],
+        "content_type": [
+            "home",
+            "education"
+        ],
+        "object_id": "1",
+        "object_repr": "Education object (1)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 7,
+    "fields": {
+        "action_time": "2024-04-07T00:28:46.134Z",
+        "user": [
+            "sgomes.cs@gmail.com"
+        ],
+        "content_type": [
+            "home",
+            "education"
+        ],
+        "object_id": "2",
+        "object_repr": "Master of Science",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 8,
+    "fields": {
+        "action_time": "2024-04-07T01:56:40.736Z",
+        "user": [
+            "sgomes.cs@gmail.com"
+        ],
+        "content_type": [
+            "home",
+            "educationactivity"
+        ],
+        "object_id": "1",
+        "object_repr": "EducationActivity object (1)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 9,
+    "fields": {
+        "action_time": "2024-04-07T02:04:55.078Z",
+        "user": [
+            "sgomes.cs@gmail.com"
+        ],
+        "content_type": [
+            "home",
+            "educationactivity"
+        ],
+        "object_id": "2",
+        "object_repr": "EducationActivity object (2)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 10,
+    "fields": {
+        "action_time": "2024-04-07T02:29:31.097Z",
+        "user": [
+            "sgomes.cs@gmail.com"
+        ],
+        "content_type": [
+            "home",
+            "educationactivity"
+        ],
+        "object_id": "3",
+        "object_repr": "EducationActivity object (3)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 11,
+    "fields": {
+        "action_time": "2024-04-07T02:33:26.425Z",
+        "user": [
+            "sgomes.cs@gmail.com"
+        ],
+        "content_type": [
+            "home",
+            "educationactivity"
+        ],
+        "object_id": "3",
+        "object_repr": "EducationActivity object (3)",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 12,
+    "fields": {
+        "action_time": "2024-04-07T02:35:43.699Z",
+        "user": [
+            "sgomes.cs@gmail.com"
+        ],
+        "content_type": [
+            "home",
+            "educationactivity"
+        ],
+        "object_id": "4",
+        "object_repr": "EducationActivity object (4)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 13,
+    "fields": {
+        "action_time": "2024-04-07T02:41:37.355Z",
+        "user": [
+            "sgomes.cs@gmail.com"
+        ],
+        "content_type": [
+            "home",
+            "educationactivity"
+        ],
+        "object_id": "5",
+        "object_repr": "EducationActivity object (5)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 14,
+    "fields": {
+        "action_time": "2024-04-07T02:55:31.272Z",
+        "user": [
+            "sgomes.cs@gmail.com"
+        ],
+        "content_type": [
+            "home",
+            "employer"
+        ],
+        "object_id": "1",
+        "object_repr": "Employer object (1)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 15,
+    "fields": {
+        "action_time": "2024-04-07T02:56:36.785Z",
+        "user": [
+            "sgomes.cs@gmail.com"
+        ],
+        "content_type": [
+            "home",
+            "employer"
+        ],
+        "object_id": "2",
+        "object_repr": "Employer object (2)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 16,
+    "fields": {
+        "action_time": "2024-04-07T03:01:04.318Z",
+        "user": [
+            "sgomes.cs@gmail.com"
+        ],
+        "content_type": [
+            "home",
+            "experience"
+        ],
+        "object_id": "1",
+        "object_repr": "Experience object (1)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 17,
+    "fields": {
+        "action_time": "2024-04-07T03:01:59.900Z",
+        "user": [
+            "sgomes.cs@gmail.com"
+        ],
+        "content_type": [
+            "home",
+            "experience"
+        ],
+        "object_id": "2",
+        "object_repr": "Experience object (2)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 18,
+    "fields": {
+        "action_time": "2024-04-07T04:55:47.688Z",
+        "user": [
+            "sgomes.cs@gmail.com"
+        ],
+        "content_type": [
+            "home",
+            "experienceactivity"
+        ],
+        "object_id": "1",
+        "object_repr": "ExperienceActivity object (1)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 19,
+    "fields": {
+        "action_time": "2024-04-07T04:59:33.584Z",
+        "user": [
+            "sgomes.cs@gmail.com"
+        ],
+        "content_type": [
+            "programming",
+            "programmingtool"
+        ],
+        "object_id": "1",
+        "object_repr": "ASP.NET",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 20,
+    "fields": {
+        "action_time": "2024-04-07T05:01:33.417Z",
+        "user": [
+            "sgomes.cs@gmail.com"
+        ],
+        "content_type": [
+            "programming",
+            "programmingtool"
+        ],
+        "object_id": "2",
+        "object_repr": "jQuery",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 21,
+    "fields": {
+        "action_time": "2024-04-07T05:04:38.322Z",
+        "user": [
+            "sgomes.cs@gmail.com"
+        ],
+        "content_type": [
+            "programming",
+            "programmingtool"
+        ],
+        "object_id": "3",
+        "object_repr": "MySQL",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 22,
+    "fields": {
+        "action_time": "2024-04-07T05:05:18.254Z",
+        "user": [
+            "sgomes.cs@gmail.com"
+        ],
+        "content_type": [
+            "home",
+            "experienceactivity"
+        ],
+        "object_id": "1",
+        "object_repr": "ExperienceActivity object (1)",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Programming tools\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 23,
+    "fields": {
+        "action_time": "2024-04-07T05:05:36.443Z",
+        "user": [
+            "sgomes.cs@gmail.com"
+        ],
+        "content_type": [
+            "home",
+            "experienceactivity"
+        ],
+        "object_id": "1",
+        "object_repr": "ExperienceActivity object (1)",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 24,
+    "fields": {
+        "action_time": "2024-04-07T05:06:00.781Z",
+        "user": [
+            "sgomes.cs@gmail.com"
+        ],
+        "content_type": [
+            "home",
+            "experienceactivity"
+        ],
+        "object_id": "1",
+        "object_repr": "ExperienceActivity object (1)",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Programming tools\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 25,
+    "fields": {
+        "action_time": "2024-04-07T05:06:07.599Z",
+        "user": [
+            "sgomes.cs@gmail.com"
+        ],
+        "content_type": [
+            "home",
+            "experienceactivity"
+        ],
+        "object_id": "1",
+        "object_repr": "ExperienceActivity object (1)",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Programming tools\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 26,
+    "fields": {
+        "action_time": "2024-04-07T05:32:55.125Z",
+        "user": [
+            "sgomes.cs@gmail.com"
+        ],
+        "content_type": [
+            "programming",
+            "programmingtool"
+        ],
+        "object_id": "4",
+        "object_repr": "Angular",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 27,
+    "fields": {
+        "action_time": "2024-04-07T05:33:11.751Z",
+        "user": [
+            "sgomes.cs@gmail.com"
+        ],
+        "content_type": [
+            "home",
+            "experienceactivity"
+        ],
+        "object_id": "1",
+        "object_repr": "ExperienceActivity object (1)",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Description\", \"Programming tools\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 28,
+    "fields": {
+        "action_time": "2024-04-07T05:35:23.014Z",
+        "user": [
+            "sgomes.cs@gmail.com"
+        ],
+        "content_type": [
+            "home",
+            "experienceactivity"
+        ],
+        "object_id": "2",
+        "object_repr": "ExperienceActivity object (2)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 29,
+    "fields": {
+        "action_time": "2024-04-07T05:35:40.997Z",
+        "user": [
+            "sgomes.cs@gmail.com"
+        ],
+        "content_type": [
+            "home",
+            "experienceactivity"
+        ],
+        "object_id": "2",
+        "object_repr": "ExperienceActivity object (2)",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Programming tools\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 30,
+    "fields": {
+        "action_time": "2024-04-07T05:53:47.229Z",
+        "user": [
+            "sgomes.cs@gmail.com"
+        ],
+        "content_type": [
+            "programming",
+            "programmingtool"
+        ],
+        "object_id": "5",
+        "object_repr": "Django",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 31,
+    "fields": {
+        "action_time": "2024-04-07T05:57:16.658Z",
+        "user": [
+            "sgomes.cs@gmail.com"
+        ],
+        "content_type": [
+            "programming",
+            "programmingtool"
+        ],
+        "object_id": "6",
+        "object_repr": "PostgreSQL",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 32,
+    "fields": {
+        "action_time": "2024-04-07T05:58:15.701Z",
+        "user": [
+            "sgomes.cs@gmail.com"
+        ],
+        "content_type": [
+            "home",
+            "experienceactivity"
+        ],
+        "object_id": "3",
+        "object_repr": "ExperienceActivity object (3)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 33,
+    "fields": {
+        "action_time": "2024-04-07T06:31:56.736Z",
+        "user": [
+            "sgomes.cs@gmail.com"
+        ],
+        "content_type": [
+            "home",
+            "experienceactivity"
+        ],
+        "object_id": "4",
+        "object_repr": "ExperienceActivity object (4)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 34,
+    "fields": {
+        "action_time": "2024-04-07T06:39:19.870Z",
+        "user": [
+            "sgomes.cs@gmail.com"
+        ],
+        "content_type": [
+            "programming",
+            "programmingtool"
+        ],
+        "object_id": "7",
+        "object_repr": "Node.js",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 35,
+    "fields": {
+        "action_time": "2024-04-07T06:45:58.895Z",
+        "user": [
+            "sgomes.cs@gmail.com"
+        ],
+        "content_type": [
+            "programming",
+            "programmingtool"
+        ],
+        "object_id": "8",
+        "object_repr": "EC2",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 36,
+    "fields": {
+        "action_time": "2024-04-07T06:47:30.685Z",
+        "user": [
+            "sgomes.cs@gmail.com"
+        ],
+        "content_type": [
+            "programming",
+            "programmingtool"
+        ],
+        "object_id": "9",
+        "object_repr": "MongoDB",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 37,
+    "fields": {
+        "action_time": "2024-04-07T06:48:12.669Z",
+        "user": [
+            "sgomes.cs@gmail.com"
+        ],
+        "content_type": [
+            "home",
+            "experienceactivity"
+        ],
+        "object_id": "4",
+        "object_repr": "ExperienceActivity object (4)",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 38,
+    "fields": {
+        "action_time": "2024-04-07T06:50:00.448Z",
+        "user": [
+            "sgomes.cs@gmail.com"
+        ],
+        "content_type": [
+            "home",
+            "experienceactivity"
+        ],
+        "object_id": "5",
+        "object_repr": "ExperienceActivity object (5)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 39,
+    "fields": {
+        "action_time": "2024-04-07T06:56:46.267Z",
+        "user": [
+            "sgomes.cs@gmail.com"
+        ],
+        "content_type": [
+            "home",
+            "experienceactivity"
+        ],
+        "object_id": "5",
+        "object_repr": "ExperienceActivity object (5)",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Description\", \"Programming tools\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 40,
+    "fields": {
+        "action_time": "2024-04-07T06:59:57.489Z",
+        "user": [
+            "sgomes.cs@gmail.com"
+        ],
+        "content_type": [
+            "home",
+            "experienceactivity"
+        ],
+        "object_id": "4",
+        "object_repr": "ExperienceActivity object (4)",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 41,
+    "fields": {
+        "action_time": "2024-04-07T07:02:28.447Z",
+        "user": [
+            "sgomes.cs@gmail.com"
+        ],
+        "content_type": [
+            "home",
+            "experienceactivity"
+        ],
+        "object_id": "3",
+        "object_repr": "ExperienceActivity object (3)",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 42,
+    "fields": {
+        "action_time": "2024-04-07T07:04:07.452Z",
+        "user": [
+            "sgomes.cs@gmail.com"
+        ],
+        "content_type": [
+            "home",
+            "employer"
+        ],
+        "object_id": "3",
+        "object_repr": "University of Regina",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 43,
+    "fields": {
+        "action_time": "2024-04-07T07:07:44.119Z",
+        "user": [
+            "sgomes.cs@gmail.com"
+        ],
+        "content_type": [
+            "home",
+            "experience"
+        ],
+        "object_id": "3",
+        "object_repr": "Course Instructor",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 44,
+    "fields": {
+        "action_time": "2024-04-07T07:10:06.544Z",
+        "user": [
+            "sgomes.cs@gmail.com"
+        ],
+        "content_type": [
+            "home",
+            "experience"
+        ],
+        "object_id": "3",
+        "object_repr": "Course Instructor  |  Grad Research Assistant",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Position\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 45,
+    "fields": {
+        "action_time": "2024-04-07T07:13:19.049Z",
+        "user": [
+            "sgomes.cs@gmail.com"
+        ],
+        "content_type": [
+            "home",
+            "experienceactivity"
+        ],
+        "object_id": "6",
+        "object_repr": "ExperienceActivity object (6)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 46,
+    "fields": {
+        "action_time": "2024-04-07T07:14:30.674Z",
+        "user": [
+            "sgomes.cs@gmail.com"
+        ],
+        "content_type": [
+            "home",
+            "experienceactivity"
+        ],
+        "object_id": "6",
+        "object_repr": "ExperienceActivity object (6)",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 47,
+    "fields": {
+        "action_time": "2024-04-07T07:17:25.862Z",
+        "user": [
+            "sgomes.cs@gmail.com"
+        ],
+        "content_type": [
+            "home",
+            "experienceactivity"
+        ],
+        "object_id": "7",
+        "object_repr": "ExperienceActivity object (7)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 48,
+    "fields": {
+        "action_time": "2024-04-07T07:18:16.807Z",
+        "user": [
+            "sgomes.cs@gmail.com"
+        ],
+        "content_type": [
+            "home",
+            "experienceactivity"
+        ],
+        "object_id": "7",
+        "object_repr": "ExperienceActivity object (7)",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 49,
+    "fields": {
+        "action_time": "2024-04-07T22:52:31.911Z",
+        "user": [
+            "sgomes.cs@gmail.com"
+        ],
+        "content_type": [
+            "programming",
+            "programmingtool"
+        ],
+        "object_id": "10",
+        "object_repr": "Python",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 50,
+    "fields": {
+        "action_time": "2024-04-07T22:55:02.928Z",
+        "user": [
+            "sgomes.cs@gmail.com"
+        ],
+        "content_type": [
+            "home",
+            "experienceactivity"
+        ],
+        "object_id": "5",
+        "object_repr": "ExperienceActivity object (5)",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Description\", \"Experience\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 51,
+    "fields": {
+        "action_time": "2024-04-07T22:59:09.206Z",
+        "user": [
+            "sgomes.cs@gmail.com"
+        ],
+        "content_type": [
+            "home",
+            "experienceactivity"
+        ],
+        "object_id": "8",
+        "object_repr": "ExperienceActivity object (8)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 52,
+    "fields": {
+        "action_time": "2024-04-07T23:11:47.219Z",
+        "user": [
+            "sgomes.cs@gmail.com"
+        ],
+        "content_type": [
+            "programming",
+            "category"
+        ],
+        "object_id": "4",
+        "object_repr": "Statistics / Data Mining",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 53,
+    "fields": {
+        "action_time": "2024-04-07T23:11:51.535Z",
+        "user": [
+            "sgomes.cs@gmail.com"
+        ],
+        "content_type": [
+            "programming",
+            "programmingtool"
+        ],
+        "object_id": "11",
+        "object_repr": "R",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 54,
+    "fields": {
+        "action_time": "2024-04-07T23:12:02.921Z",
+        "user": [
+            "sgomes.cs@gmail.com"
+        ],
+        "content_type": [
+            "programming",
+            "programmingtool"
+        ],
+        "object_id": "10",
+        "object_repr": "Python",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Category\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 55,
+    "fields": {
+        "action_time": "2024-04-07T23:22:54.938Z",
+        "user": [
+            "sgomes.cs@gmail.com"
+        ],
+        "content_type": [
+            "home",
+            "experienceactivity"
+        ],
+        "object_id": "9",
+        "object_repr": "ExperienceActivity object (9)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 56,
+    "fields": {
+        "action_time": "2024-04-09T03:03:00.935Z",
+        "user": [
+            "sgomes.cs@gmail.com"
+        ],
+        "content_type": [
+            "home",
+            "publication"
+        ],
+        "object_id": "1",
+        "object_repr": "Publication object (1)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 57,
+    "fields": {
+        "action_time": "2024-04-09T03:04:34.527Z",
+        "user": [
+            "sgomes.cs@gmail.com"
+        ],
+        "content_type": [
+            "home",
+            "publication"
+        ],
+        "object_id": "2",
+        "object_repr": "Publication object (2)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 58,
+    "fields": {
+        "action_time": "2024-04-09T03:06:43.177Z",
+        "user": [
+            "sgomes.cs@gmail.com"
+        ],
+        "content_type": [
+            "home",
+            "publication"
+        ],
+        "object_id": "3",
+        "object_repr": "Publication object (3)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 59,
+    "fields": {
+        "action_time": "2024-04-09T03:08:10.021Z",
+        "user": [
+            "sgomes.cs@gmail.com"
+        ],
+        "content_type": [
+            "home",
+            "publication"
+        ],
+        "object_id": "4",
+        "object_repr": "Publication object (4)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 60,
+    "fields": {
+        "action_time": "2024-04-09T03:09:35.129Z",
+        "user": [
+            "sgomes.cs@gmail.com"
+        ],
+        "content_type": [
+            "home",
+            "publication"
+        ],
+        "object_id": "5",
+        "object_repr": "Publication object (5)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 61,
+    "fields": {
+        "action_time": "2024-04-09T03:19:45.613Z",
+        "user": [
+            "sgomes.cs@gmail.com"
+        ],
+        "content_type": [
+            "home",
+            "publication"
+        ],
+        "object_id": "4",
+        "object_repr": "A study of cross-session cross-device search withi...",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Title\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 62,
+    "fields": {
+        "action_time": "2024-04-09T03:22:34.257Z",
+        "user": [
+            "sgomes.cs@gmail.com"
+        ],
+        "content_type": [
+            "home",
+            "publication"
+        ],
+        "object_id": "5",
+        "object_repr": "Visual Keyword/Result Linking: Using Interaction t...",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 63,
+    "fields": {
+        "action_time": "2024-04-09T03:23:17.687Z",
+        "user": [
+            "sgomes.cs@gmail.com"
+        ],
+        "content_type": [
+            "home",
+            "publication"
+        ],
+        "object_id": "4",
+        "object_repr": "A study of cross-session cross-device search withi...",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 64,
+    "fields": {
+        "action_time": "2024-04-09T03:23:44.538Z",
+        "user": [
+            "sgomes.cs@gmail.com"
+        ],
+        "content_type": [
+            "home",
+            "publication"
+        ],
+        "object_id": "3",
+        "object_repr": "Supporting cross-session cross-device search in an...",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 65,
+    "fields": {
+        "action_time": "2024-04-09T04:07:11.369Z",
+        "user": [
+            "sgomes.cs@gmail.com"
+        ],
+        "content_type": [
+            "home",
+            "profile"
+        ],
+        "object_id": "1",
+        "object_repr": "Profile object (1)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 66,
+    "fields": {
+        "action_time": "2024-04-09T04:49:45.508Z",
+        "user": [
+            "sgomes.cs@gmail.com"
+        ],
+        "content_type": [
+            "home",
+            "profile"
+        ],
+        "object_id": "1",
+        "object_repr": "Sebastian Gomes",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Location\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 67,
+    "fields": {
+        "action_time": "2024-04-09T04:53:36.529Z",
+        "user": [
+            "sgomes.cs@gmail.com"
+        ],
+        "content_type": [
+            "home",
+            "profile"
+        ],
+        "object_id": "1",
+        "object_repr": "Sebastian Gomes",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 68,
+    "fields": {
+        "action_time": "2024-04-09T06:09:45.909Z",
+        "user": [
+            "sgomes.cs@gmail.com"
+        ],
+        "content_type": [
+            "home",
+            "personalskill"
+        ],
+        "object_id": "1",
+        "object_repr": "MongoDB",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 69,
+    "fields": {
+        "action_time": "2024-04-09T06:10:46.018Z",
+        "user": [
+            "sgomes.cs@gmail.com"
+        ],
+        "content_type": [
+            "home",
+            "personalskill"
+        ],
+        "object_id": "2",
+        "object_repr": "PostgreSQL",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 70,
+    "fields": {
+        "action_time": "2024-04-09T06:10:58.774Z",
+        "user": [
+            "sgomes.cs@gmail.com"
+        ],
+        "content_type": [
+            "home",
+            "personalskill"
+        ],
+        "object_id": "3",
+        "object_repr": "MySQL",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 71,
+    "fields": {
+        "action_time": "2024-04-09T06:13:19.637Z",
+        "user": [
+            "sgomes.cs@gmail.com"
+        ],
+        "content_type": [
+            "home",
+            "personalskill"
+        ],
+        "object_id": "4",
+        "object_repr": "Front-end - Angular",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 72,
+    "fields": {
+        "action_time": "2024-04-09T06:13:41.929Z",
+        "user": [
+            "sgomes.cs@gmail.com"
+        ],
+        "content_type": [
+            "home",
+            "personalskill"
+        ],
+        "object_id": "5",
+        "object_repr": "Front-end - jQuery",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 73,
+    "fields": {
+        "action_time": "2024-04-09T06:16:25.136Z",
+        "user": [
+            "sgomes.cs@gmail.com"
+        ],
+        "content_type": [
+            "programming",
+            "programmingtool"
+        ],
+        "object_id": "12",
+        "object_repr": "JavaScript",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 74,
+    "fields": {
+        "action_time": "2024-04-09T06:16:32.856Z",
+        "user": [
+            "sgomes.cs@gmail.com"
+        ],
+        "content_type": [
+            "home",
+            "personalskill"
+        ],
+        "object_id": "6",
+        "object_repr": "Front-end - JavaScript",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 75,
+    "fields": {
+        "action_time": "2024-04-09T06:16:55.473Z",
+        "user": [
+            "sgomes.cs@gmail.com"
+        ],
+        "content_type": [
+            "home",
+            "personalskill"
+        ],
+        "object_id": "7",
+        "object_repr": "Back-end - Node.js",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 76,
+    "fields": {
+        "action_time": "2024-04-09T06:17:08.473Z",
+        "user": [
+            "sgomes.cs@gmail.com"
+        ],
+        "content_type": [
+            "home",
+            "personalskill"
+        ],
+        "object_id": "8",
+        "object_repr": "Back-end - Django",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 77,
+    "fields": {
+        "action_time": "2024-04-09T06:17:15.305Z",
+        "user": [
+            "sgomes.cs@gmail.com"
+        ],
+        "content_type": [
+            "home",
+            "personalskill"
+        ],
+        "object_id": "9",
+        "object_repr": "Back-end - ASP.NET",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 78,
+    "fields": {
+        "action_time": "2024-04-09T06:17:28.357Z",
+        "user": [
+            "sgomes.cs@gmail.com"
+        ],
+        "content_type": [
+            "home",
+            "personalskill"
+        ],
+        "object_id": "10",
+        "object_repr": "Statistics / Data Mining - Python",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 79,
+    "fields": {
+        "action_time": "2024-04-09T06:17:43.440Z",
+        "user": [
+            "sgomes.cs@gmail.com"
+        ],
+        "content_type": [
+            "home",
+            "personalskill"
+        ],
+        "object_id": "11",
+        "object_repr": "Statistics / Data Mining - R",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 80,
+    "fields": {
+        "action_time": "2024-04-21T06:59:58.614Z",
+        "user": [
+            "sgomes.cs@gmail.com"
+        ],
+        "content_type": [
+            "home",
+            "experience"
+        ],
+        "object_id": "3",
+        "object_repr": "Course Instructor  |  Grad Research Assistant",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Started at\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 81,
+    "fields": {
+        "action_time": "2024-04-22T02:23:53.726Z",
+        "user": [
+            "sgomes.cs@gmail.com"
+        ],
+        "content_type": [
+            "portfolioproject",
+            "project"
+        ],
+        "object_id": "1",
+        "object_repr": "Dilex",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 82,
+    "fields": {
+        "action_time": "2024-04-22T02:27:58.673Z",
+        "user": [
+            "sgomes.cs@gmail.com"
+        ],
+        "content_type": [
+            "portfolioproject",
+            "projecttool"
+        ],
+        "object_id": "1",
+        "object_repr": "Dilex: Database",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 83,
+    "fields": {
+        "action_time": "2024-04-22T02:28:28.516Z",
+        "user": [
+            "sgomes.cs@gmail.com"
+        ],
+        "content_type": [
+            "portfolioproject",
+            "projecttool"
+        ],
+        "object_id": "2",
+        "object_repr": "Dilex: Frontend",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 84,
+    "fields": {
+        "action_time": "2024-04-22T02:28:43.771Z",
+        "user": [
+            "sgomes.cs@gmail.com"
+        ],
+        "content_type": [
+            "portfolioproject",
+            "projecttool"
+        ],
+        "object_id": "3",
+        "object_repr": "Dilex: Backend",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 85,
+    "fields": {
+        "action_time": "2024-04-22T02:29:39.233Z",
+        "user": [
+            "sgomes.cs@gmail.com"
+        ],
+        "content_type": [
+            "portfolioproject",
+            "projecttool"
+        ],
+        "object_id": "4",
+        "object_repr": "Dilex: Hosting",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 86,
+    "fields": {
+        "action_time": "2024-04-22T03:02:06.121Z",
+        "user": [
+            "sgomes.cs@gmail.com"
+        ],
+        "content_type": [
+            "portfolioproject",
+            "projecthighlights"
+        ],
+        "object_id": "1",
+        "object_repr": "Dilex: Dilex Search provides a clear and intuitive visual timeline of our past search activities",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 87,
+    "fields": {
+        "action_time": "2024-04-22T03:03:41.905Z",
+        "user": [
+            "sgomes.cs@gmail.com"
+        ],
+        "content_type": [
+            "portfolioproject",
+            "projecthighlights"
+        ],
+        "object_id": "2",
+        "object_repr": "Dilex: Search results are organized by tasks, enabling search interests distinct from one another",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 88,
+    "fields": {
+        "action_time": "2024-04-22T04:19:10.486Z",
+        "user": [
+            "sgomes.cs@gmail.com"
+        ],
+        "content_type": [
+            "portfolioproject",
+            "projecthighlights"
+        ],
+        "object_id": "2",
+        "object_repr": "Dilex: Search results are organized by tasks, making search interests distinct from one another",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 89,
+    "fields": {
+        "action_time": "2024-04-22T04:23:02.811Z",
+        "user": [
+            "sgomes.cs@gmail.com"
+        ],
+        "content_type": [
+            "portfolioproject",
+            "projecthighlights"
+        ],
+        "object_id": "2",
+        "object_repr": "Dilex: Search results and saved documents are organized by tasks.",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 90,
+    "fields": {
+        "action_time": "2024-04-22T04:23:29.277Z",
+        "user": [
+            "sgomes.cs@gmail.com"
+        ],
+        "content_type": [
+            "portfolioproject",
+            "projecthighlights"
+        ],
+        "object_id": "1",
+        "object_repr": "Dilex: Unique timeline visualization for assessing past search sessions.",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 91,
+    "fields": {
+        "action_time": "2024-04-22T04:24:58.421Z",
+        "user": [
+            "sgomes.cs@gmail.com"
+        ],
+        "content_type": [
+            "portfolioproject",
+            "projecthighlights"
+        ],
+        "object_id": "3",
+        "object_repr": "Dilex: Dynamic topic highlighting when search results are scrolled.",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+}
+]
