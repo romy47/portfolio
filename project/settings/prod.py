@@ -14,4 +14,4 @@ DATABASES = {
     }
 }
 
-STATIC_ROOT  = os.path.join(BASE_DIR, 'deployment', 'collected_static')
+STATIC_ROOT  = os.path.join(BASE_DIR, 'deployment', 'static')
