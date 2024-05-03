@@ -46,7 +46,7 @@
     <a class="btn btn-outline-secondary ms-3 fw-medium" href="projects">View All <i
             class="fa-solid fa-arrow-right ms-2"></i></a>
 </h3>
-<div class="row bxslider">
+<div class="row bxslider" style="min-height: 500px;">
     {% for project in projects %}
     <div class="col-md-4 p-3">
         <div class="card border-2 shadow">
@@ -84,16 +84,18 @@
 
 {% for experience in experiences %}
 <div class="row mb-4">
-    <div class="col-md-3 d-flex flex-column justify-content-between py-2">
-        <p class="display-3 text-opacity-50 fw-bold text-secondary mb-1">
-            {% if experience.ended_at is None %}
-            Present
-            {% else %}
-            {{ experience.ended_at|date:"Y" }}
-            {% endif %}
-        </p>
-        <div class="flex-grow-1 year-divider"></div>
-        <p class="display-3 text-opacity-50 fw-bold text-secondary">{{ experience.started_at|date:"Y" }}</p>
+    <div class="col-md-3 d-flex flex-column justify-content-between py-2 d-none d-md-block">
+        <div class="d-flex flex-column justify-content-between h-100">
+            <p class="display-3 text-opacity-50 fw-bold text-secondary mb-1">
+                {% if experience.ended_at is None %}
+                Present
+                {% else %}
+                {{ experience.ended_at|date:"Y" }}
+                {% endif %}
+            </p>
+            <div class="flex-grow-1 year-divider"></div>
+            <p class="display-3 text-opacity-50 fw-bold text-secondary">{{ experience.started_at|date:"Y" }}</p>
+        </div>
     </div>
     <div class="col-md-9 p-3">
         <div class="card border-1 shadow">
@@ -103,18 +105,19 @@
                         <p class="mb-0 h3 fw-bold text-dark-emphasis">
                             {{experience.position}}</p>
                         <p class="fs-6 text-secondary fw-normal mb-1">{{education.specialization}}</p>
-                        <p class="mb-0 h5 text-dark-emphasis">{{experience.employer.name}}
-                            <span class="fs-6 text-secondary fw-normal ms-3">{{experience.employer.location}}</span>
-                            <span class="fs-6 text-secondary fw-normal ms-3">{{experience.started_at|date:"Y"}} -
-                                {% if experience.ended_at is None %}
-                                Present
-                                {% else %}
-                                {{ experience.ended_at|date:"Y" }}
-                                {% endif %}
-                            </span>
+                        <p class="mb-0 h5 text-dark-emphasis">{{experience.employer.name}} </p>
+                        <p class="fs-6 text-secondary fw-normal mb-0">{{experience.employer.location}}</p>
+                        <p class="fs-6 text-secondary fw-normal mb-0">{{experience.started_at|date:"Y"}}
+                            -
+                            {% if experience.ended_at is None %}
+                            Present
+                            {% else %}
+                            {{ experience.ended_at|date:"Y" }}
+                            {% endif %}
                         </p>
                     </div>
-                    <img class="opacity-75" style="height: 75px;" src="{{experience.employer.image.url}}">
+                    <img class="opacity-75 d-none d-sm-block" style="max-width:160px;object-fit: contain;"
+                        src="{{experience.employer.image.url}}">
                 </div>
             </div>
             <hr class="my-2">
@@ -147,10 +150,12 @@
 <h3 class="mt-5">Education</h3>
 {% for education in educations %}
 <div class="row mb-4">
-    <div class="col-md-3 d-flex flex-column justify-content-between py-2">
-        <p class="display-3 text-opacity-50 fw-bold text-secondary mb-1">{{ education.ended_at|date:"Y" }}</p>
-        <div class="flex-grow-1 year-divider"></div>
-        <p class="display-3 text-opacity-50 fw-bold text-secondary">{{ education.started_at|date:"Y" }}</p>
+    <div class="col-md-3 py-2 d-none d-md-block">
+        <div class="d-flex flex-column justify-content-between h-100">
+            <p class="display-3 text-opacity-50 fw-bold text-secondary mb-1">{{ education.ended_at|date:"Y" }}</p>
+            <div class="flex-grow-1 year-divider"></div>
+            <p class="display-3 text-opacity-50 fw-bold text-secondary">{{ education.started_at|date:"Y" }}</p>
+        </div>
     </div>
     <div class="col-md-9 p-3">
         <div class="card border-1 shadow">
@@ -159,11 +164,12 @@
                     <div>
                         <p class="mb-0 h3 fw-bold text-dark-emphasis">
                             {{education.degree}}</p>
-                        <p class="fs-6 text-secondary fw-normal mb-1">Major: {{education.specialization}}</p>
-                        <p class="mb-0 h5 text-dark-emphasis">{{education.institute.name}} <span
-                                class="fs-6 text-secondary fw-normal ms-3">{{ education.ended_at|date:"Y" }}</span></p>
+                        <p class="mb-0 h5 text-dark-emphasis">Major: {{education.specialization}}</p>
+                        <p class="fs-6 text-secondary fw-normal mb-0">{{education.institute.name}} </p>
+                        <p class="fs-6 text-secondary fw-normal mb-0">{{ education.ended_at|date:"Y" }}</p>
                     </div>
-                    <img class="opacity-75" style="height: 75px;" src="{{education.institute.image.url}}">
+                    <img class="opacity-75 d-none d-sm-block" style="height: 75px;"
+                        src="{{education.institute.image.url}}">
                 </div>
             </div>
             <hr class="my-2">
@@ -188,7 +194,7 @@
 <h3 class="mt-5">Publictions</h3>
 {% for publication in publications %}
 <div class="row mb-4">
-    <div class="col-md-3 d-flex flex-column justify-content-between py-2">
+    <div class="col-md-3 d-flex flex-column justify-content-between py-2 d-none d-md-block">
         <p class="display-3 text-opacity-50 fw-bold text-secondary">{{ publication.year }}</p>
     </div>
     <div class="col-md-9 p-3">
