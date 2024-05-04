@@ -58,9 +58,9 @@
                 <div>
                     <p class="card-text mt-1 ms-2">{{project.sub_title}}
                     </p>
-                    <span class="badge badge-light border"> Angular </span>
-                    <span class="badge badge-light border"> Node.js </span>
-                    <span class="badge badge-light border"> Mongo DB </span>
+                    {% for project_tool in project.project_tools.all %}
+                    <span class="badge badge-light border"> {{project_tool.programming_tool.title}} </span>
+                    {% endfor %}
                 </div>
             </div>
             <div class="card-body">

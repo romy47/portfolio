@@ -15,9 +15,10 @@
         <p class="fs-4 card-text mt-1 ms-2">{{project.sub_title}}
         </p>
         <div class="mb-3">
-            <span class="badge text-secondary border fs-6"> Angular </span>
-            <span class="badge text-secondary border fs-6"> Node.js </span>
-            <span class="badge text-secondary border fs-6"> Mongo DB </span>
+            {% for project_tool in project.project_tools.all %}
+            <span class="badge badge-light border text-body border-2"> {{project_tool.programming_tool.title}}
+            </span>
+            {% endfor %}
         </div>
         {% for highlight in project.project_highlights.all %}
         <p class="mb-0 d-flex align-items-start"><i class="fa-regular fa-circle-check me-2 mt-1"></i>
