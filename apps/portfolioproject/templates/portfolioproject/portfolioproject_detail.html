@@ -24,6 +24,9 @@
         <p class="mb-0 d-flex align-items-start"><i class="fa-regular fa-circle-check me-2 mt-1"></i>
             {{highlight.description}}</p>
         {% endfor %}
+        <br>
+        {{ project.description|safe }}
+        <br>
     </div>
 </div>
 {% endblock template%}
