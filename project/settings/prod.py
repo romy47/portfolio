@@ -1,16 +1,18 @@
 from .settings import *
-import os
+from dotenv import load_dotenv
+import socket, os
+load_dotenv()
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 ALLOWED_HOSTS = ['sebastiangomes.com']
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'portfolio',
-        'USER': 'himu',
-        'PASSWORD': 'unhcevg6.4cec2456',
-        'HOST': 'localhost',
-        'PORT': '5432',
+        'NAME': os.environ.get('PROD_DB_NAME'),
+        'USER': os.environ.get('PROD_DB_USER'),
+        'PASSWORD': os.environ.get('PROD_DB_PASSWORD'),
+        'HOST': os.environ.get('PROD_DB_HOST'),
+        'PORT': os.environ.get('PROD_DB_PORT')
     }
 }
 
