@@ -2,7 +2,7 @@
 A database-driven portfolio and blog site built with Django, PostgreSQL, and Bootstrap.
 
 ## Motivation
-For my portfolio site, I wanted to organize work experience, projects, blog posts, and skills associated with a common set of programming languages and frameworks. This design ensures that data is linked across multiple entities minimizing redundancy. It also facilitates finding related entity types through programming language matches. Django includes a built-in admin interface for inserting new data into these entities. I am currently using this project for my portfolio and plan to update various components regularly.
+I had a portfolio site before but I was tired of changing HTML content and wanted to have a more structured approach. For my portfolio site, I wanted to organize work experience, projects, blog posts, publications, and skills associated with a common set of programming languages and frameworks. For example, adding 'Django' into a portfolio project and then adding it again to another blog post about Django development. This design ensures that data is linked across multiple entities minimizing redundancy. It also facilitates finding related entity types through programming language matches. Django includes a built-in admin interface for inserting new data into these entities. I am currently using this project for my portfolio and plan to update various components regularly.
 
 ## Features
 - Skills, Work Experiences, Projects, Publications all of these are database-driven
