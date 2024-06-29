@@ -1,8 +1,8 @@
 # Dynamic Portfolio and Blog App
-A database driven-portfolio and blog site built with Django, PostgreSQL, and Bootstrap.
+A database-driven portfolio and blog site built with Django, PostgreSQL, and Bootstrap.
 
 ## Motivation
-I want to have a personal portfolio and blog website where work experience, projects, blog posts and skills can be tagged with a common set of programming languages and frameworks. This design links blog posts, work experiences, personal projects, and skills together so that the same data is not repeated. This also helps to find related entity types by matching programming languages. Django has a built-in admin interface where new data for these entities can be inserted. Currently, I am using this project for my portfolio and will continue updating different pieces.
+For my portfolio site, I wanted to organize work experience, projects, blog posts, and skills associated with a common set of programming languages and frameworks. This design ensures that data is linked across multiple entities minimizing redundancy. It also facilitates finding related entity types through programming language matches. Django includes a built-in admin interface for inserting new data into these entities. I am currently using this project for my portfolio and plan to update various components regularly.
 
 ## Features
 - Skills, Work Experiences, Projects, Publications all of these are database-driven
