@@ -1,0 +1,43 @@
+version: '3.8'
+services:
+ postgresql:
+   image: postgres
+   container_name: postgresql
+   volumes:
+     - postgresql_db:/var/lib/postgresql/data
+   ports:
+     - "5432:5432"
+   env_file:
+     - ./.env
+   environment:
+     - POSTGRES_DB=${DEV_DB_NAME}
+     - POSTGRES_USER=${DEV_DB_USER}
+     - POSTGRES_NAME=${DEV_DB_NAME}
+     - POSTGRES_PASSWORD=${DEV_DB_PASSWORD}
+
+
+ django_gunicorn:
+   build: ./
+   volumes:
+     - static:/static
+   env_file:
+     - ./.env
+   ports:
+     - "8000:8000"
+   depends_on:
+     - postgresql
+
+
+ nginx:
+   build: ./nginx
+   volumes:
+     - static:/static
+   ports:
+     - "80:80"
+   depends_on:
+     - django_gunicorn
+
+
+volumes:
+ static:
+ postgresql_db:
