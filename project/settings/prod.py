@@ -4,7 +4,7 @@ import socket, os
 load_dotenv()
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
-ALLOWED_HOSTS = ['sebastiangomes.com']
+ALLOWED_HOSTS = os.environ.get('PROD_ALLOWED_HOSTS').split(' ')
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
@@ -16,4 +16,4 @@ DATABASES = {
     }
 }
 
-STATIC_ROOT  = os.path.join(BASE_DIR, 'deployment', 'static')
+STATIC_ROOT  = os.path.join(BASE_DIR, 'static')

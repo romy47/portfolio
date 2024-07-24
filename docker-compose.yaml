@@ -19,14 +19,13 @@ services:
  django_gunicorn:
    build: ./
    volumes:
-     - static:/static
+     - static:/app/project/static
    env_file:
      - ./.env
    ports:
      - "8000:8000"
    depends_on:
      - postgresql
-
 
  nginx:
    build: ./nginx
@@ -36,7 +35,6 @@ services:
      - "80:80"
    depends_on:
      - django_gunicorn
-
 
 volumes:
  static:
