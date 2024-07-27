@@ -4,7 +4,7 @@ import socket, os
 load_dotenv()
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
-ALLOWED_HOSTS = os.environ.get('PROD_ALLOWED_HOSTS').split(' ')
+ALLOWED_HOSTS = os.environ.get('PROD_ALLOWED_HOST').split(' ')
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
