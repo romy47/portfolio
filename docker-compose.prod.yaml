@@ -1,0 +1,63 @@
+version: '3.8'
+services:
+ postgresql:
+   build: ./postgresql
+   image: postgres
+   container_name: postgresql
+   volumes:
+     - postgresql-db:/var/lib/postgresql/data
+   ports:
+     - "5432:5432"
+   env_file:
+     - ./.env
+   environment:
+     - POSTGRES_DB=${PROD_DB_NAME}
+     - POSTGRES_USER=${PROD_DB_USER}
+     - POSTGRES_NAME=${PROD_DB_NAME}
+     - POSTGRES_PASSWORD=${PROD_DB_PASSWORD}
+
+ django_gunicorn:
+   build: ./
+   volumes:
+     - static:/app/project/static
+   env_file:
+     - ./.env
+   ports:
+     - "8000:8000"
+   depends_on:
+     - postgresql
+
+ nginx:
+   build: 
+    context: ./nginx
+    dockerfile: Dockerfile.prod
+   environment:
+     - DOMAIN=${PROD_ALLOWED_HOST}
+   volumes:
+     - static:/static
+     - certbot-web:/vol/www
+     - certbot-certs:/etc/letsencrypt
+     - nginx-ssl-conf:/vol/nginx_ssl_conf
+   ports:
+     - "80:80"
+   depends_on:
+     - django_gunicorn
+ 
+ certbot:
+   build: ./certbot
+   environment:
+     - EMAIL=${EMAIL}
+     - DOMAIN=${PROD_ALLOWED_HOST}
+     - CERTBOT_CERTIFICATE_STAGING=${CERTBOT_CERTIFICATE_STAGING}
+   volumes:
+     - certbot-web:/vol/www
+     - certbot-certs:/etc/letsencrypt/
+   depends_on:
+     - nginx
+
+volumes:
+ static:
+ postgresql-db:
+ certbot-web:
+ certbot-certs:
+ nginx-ssl-conf:

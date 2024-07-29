@@ -12,7 +12,7 @@ I want to have a personal portfolio and blog website where work experience, proj
 ## Prerequisites
 - Python 3.12.0 or higher
 
-## Installation
+## Dev Installation
 1. Setup PostgreSQL
 2. Clone repo: `git clone git@github.com:romy47/portfolio.git`
 3. Create a virtual environment: `python3 -m venv venv`
@@ -23,3 +23,13 @@ I want to have a personal portfolio and blog website where work experience, proj
 6. Install dependencies: `pip install -r requirements.txt`
 7. Migrate database: `python manage.py migrate`
 8. Start app: `python manage.py runserver`
+
+## Docker Installation (Production)
+1. Install docker, docker-compose
+2. Create '.env' file following the example given on '.env.example'
+2. Add ssl certificate with
+    - sudo docker-compose -f docker-compose.yml run --rm certbot /app/certbot-init.sh
+3. Once the certificate is added stop all containers
+    - docker-compose -f docker-compose.yml down
+4. Rerun the docker compose file. Use only this command for all subsequent deployments:
+    - docker-compose -f docker-compose.yml up

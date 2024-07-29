@@ -4,11 +4,10 @@ upstream django {
 
 server {
     listen 80;
-    server_name ${PROD_ALLOWED_HOST};
-    server_tokens off;
+    server_name ${DOMAIN} www.${DOMAIN};
 
     location /.well-known/acme-challenge/ {
-        root /var/www/certbot;
+        root /vol/www/;
     }
 
     location / {
@@ -17,14 +16,16 @@ server {
 }
 
 server {
-    listen 443 ssl;
-    server_name ${PROD_ALLOWED_HOST};
-    server_tokens off;
+    listen      443 ssl;
+    server_name ${DOMAIN} www.${DOMAIN};
 
-    ssl_certificate /etc/letsencrypt/live/${PROD_ALLOWED_HOST}/fullchain.pem;
-    ssl_certificate_key /etc/letsencrypt/live/${PROD_ALLOWED_HOST}/privkey.pem;
-    include /etc/letsencrypt/options-ssl-nginx.conf;
-    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem;
+    ssl_certificate     /etc/letsencrypt/live/${DOMAIN}/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/${DOMAIN}/privkey.pem;
+    
+    include /vol/nginx_ssl_conf/options-ssl-nginx.conf;
+    ssl_dhparam /vol/nginx_ssl_conf/ssl-dhparams.pem;
+
+    add_header Strict-Transport-Security "max-age=31536000; includeSubDomains" always;
 
     location / {
         proxy_pass http://django;
