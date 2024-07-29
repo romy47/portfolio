@@ -1,0 +1,7 @@
+FROM nginx:1.23.0-alpine
+
+COPY ./conf/* /etc/nginx/
+COPY ./setup_nginx_conf.sh setup_nginx_conf.sh
+
+RUN chmod +x ./setup_nginx_conf.sh
+RUN ./setup_nginx_conf.sh
