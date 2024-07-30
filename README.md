@@ -28,8 +28,8 @@ I had a portfolio site before but I was tired of changing HTML content and wante
 1. Install docker, docker-compose
 2. Create '.env' file following the example given on '.env.example'
 2. Add ssl certificate with
-    - sudo docker-compose -f docker-compose.yml run --rm certbot /app/certbot-init.sh
+    - sudo docker-compose -f docker-compose.prod.yaml run --rm certbot /app/certbot_init.sh
 3. Once the certificate is added stop all containers
-    - docker-compose -f docker-compose.yml down
-4. Rerun the docker compose file. Use only this command for all subsequent deployments:
-    - docker-compose -f docker-compose.yml up
+    - docker-compose -f docker-compose.prod.yaml down
+4. Return the docker compose file. Use only this command for all subsequent deployments:
+    - docker-compose -f docker-compose.prod.yaml up
