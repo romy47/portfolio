@@ -39,6 +39,7 @@ services:
      - nginx-ssl-conf:/vol/nginx_ssl_conf
    ports:
      - "80:80"
+     - "443:443"
    depends_on:
      - django_gunicorn
  
