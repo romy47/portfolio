@@ -15,3 +15,6 @@ DATABASES = {
         'PORT': os.environ.get('DEV_DB_PORT')
     }
 }
+SUPERUSER_EMAIL = os.environ.get('DEV_SUPERUSER_EMAIL')
+SUPERUSER_USERNAME = os.environ.get('DEV_SUPERUSER_USERNAME')
+SUPERUSER_PASSWORD = os.environ.get('DEV_SUPERUSER_PASSWORD')

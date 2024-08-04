@@ -12,11 +12,6 @@ until nc -z nginx 80; do
     sleep 5s & wait ${!}
 done
 
-# Enable staging mode if needed
-if [ "$CERTBOT_CERTIFICATE_STAGING" = "True" ]; then
-  staging_arg="--staging"
-fi
-
 echo "Getting certificate..."
 
 certbot certonly \
