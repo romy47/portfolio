@@ -19,6 +19,7 @@ services:
    build: ./
    volumes:
      - static:/app/project/static
+     - media:/app/project/media
    env_file:
      - ./.env
    ports:
@@ -40,3 +41,4 @@ services:
 volumes:
  static:
  postgresql-db:
+ media:

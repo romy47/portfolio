@@ -19,6 +19,7 @@ services:
    build: ./
    volumes:
      - static:/app/project/static
+     - media:/app/project/media
    env_file:
      - ./.env
    ports:
@@ -60,3 +61,4 @@ volumes:
  certbot-web:
  certbot-certs:
  nginx-ssl-conf:
+ media:
