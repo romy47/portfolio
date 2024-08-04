@@ -12,7 +12,7 @@ class HomeView(View):
         experiences = Experience.objects.all().order_by('-started_at')
         projects = Project.objects.all()
         publications = Publication.objects.all().order_by('-year')
-        profile = Profile.objects.filter(email='sgomes.cs@gmail.com').first()
+        profile = Profile.objects.first()
         skill_categories = Category.objects.exclude(personal_skills = None)
 
         # print('Projects Length: ', len(projects))
