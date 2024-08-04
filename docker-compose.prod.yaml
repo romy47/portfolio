@@ -46,9 +46,8 @@ services:
  certbot:
    build: ./certbot
    environment:
-     - EMAIL=${EMAIL}
+     - EMAIL=${PROD_CERTBOT_EMAIL}
      - DOMAIN=${PROD_ALLOWED_HOST}
-     - CERTBOT_CERTIFICATE_STAGING=${CERTBOT_CERTIFICATE_STAGING}
    volumes:
      - certbot-web:/vol/www
      - certbot-certs:/etc/letsencrypt/
