@@ -33,6 +33,7 @@ services:
     dockerfile: Dockerfile.dev
    volumes:
      - static:/static
+     - media:/media
    ports:
      - "80:80"
    depends_on:
