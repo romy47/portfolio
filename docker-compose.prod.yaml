@@ -35,6 +35,7 @@ services:
      - DOMAIN=${PROD_ALLOWED_HOST}
    volumes:
      - static:/static
+     - media:/media
      - certbot-web:/vol/www
      - certbot-certs:/etc/letsencrypt
      - nginx-ssl-conf:/vol/nginx_ssl_conf
