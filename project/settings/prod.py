@@ -5,6 +5,9 @@ load_dotenv()
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 ALLOWED_HOSTS = os.environ.get('PROD_ALLOWED_HOST').split(' ')
+CSRF_TRUSTED_ORIGINS = os.environ.get('PROD_ALLOWED_HOST').split(' ')
+CSRF_TRUSTED_ORIGINS = ['https://' + host for host in CSRF_TRUSTED_ORIGINS]
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
