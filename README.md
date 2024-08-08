@@ -24,12 +24,13 @@ I had a portfolio site before but I was tired of changing HTML content and wante
 7. Migrate database: `python manage.py migrate`
 8. Start app: `python manage.py runserver`
 
-## Docker Installation (Production)
-1. Install docker, docker-compose
-2. Create '.env' file following the example given on '.env.example'
-2. Add ssl certificate with
+## Dockerized Deployment (Production)
+1. Switch to 'docker' branch
+2. Install docker, docker-compose
+3. Create '.env' file following the example given on '.env.example'
+4. Add ssl certificate with
     - sudo docker-compose -f docker-compose.prod.yaml run --rm certbot /app/certbot_init.sh
-3. Once the certificate is added stop all containers
+5. Once the certificate is added stop all containers
     - docker-compose -f docker-compose.prod.yaml down
-4. Return the docker compose file. Use only this command for all subsequent deployments:
+6. Return the docker compose file. Use only this command for all subsequent deployments:
     - docker-compose -f docker-compose.prod.yaml up
