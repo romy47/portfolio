@@ -2,7 +2,6 @@ version: '3.8'
 services:
  postgresql:
    image: postgres
-   container_name: postgresql
    volumes:
      - postgresql-db:/var/lib/postgresql/data
    ports:
@@ -30,7 +29,6 @@ services:
  nginx:
    build: 
     context: ./nginx
-    dockerfile: Dockerfile.dev
    volumes:
      - static:/static
      - media:/media
