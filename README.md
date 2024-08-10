@@ -29,5 +29,6 @@ I had a portfolio site before but I was tired of changing HTML content and wante
 2. Switch to 'medium_1_docker_dev' branch
 3. Install docker, docker-compose
 4. Create '.env' file following the example given on '.env.example'
-5. Start all docker services:
-    - docker-compose up
+5. Build and Start all docker services:
+    - Linux: sudo docker compose up --build
+    - Windows, MacOS: docker compose up --build
