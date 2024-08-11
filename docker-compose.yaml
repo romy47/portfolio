@@ -1,42 +1,48 @@
 version: '3.8'
 services:
- postgresql:
-   image: postgres
-   volumes:
-     - postgresql-db:/var/lib/postgresql/data
-   ports:
-     - "5432:5432"
-   env_file:
-     - ./.env
-   environment:
-     - POSTGRES_DB=${DEV_DB_NAME}
-     - POSTGRES_USER=${DEV_DB_USER}
-     - POSTGRES_PASSWORD=${DEV_DB_PASSWORD}
+  postgresql:
+    image: postgres
+    volumes:
+      - postgresql-db:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    env_file:
+      - ./.env
+    environment:
+      - POSTGRES_DB=${DEV_DB_NAME}
+      - POSTGRES_USER=${DEV_DB_USER}
+      - POSTGRES_PASSWORD=${DEV_DB_PASSWORD}
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${DEV_DB_USER}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
 
- django_gunicorn:
-   build: ./
-   volumes:
-     - static:/app/project/static
-     - media:/app/project/media
-   env_file:
-     - ./.env
-   ports:
-     - "8000:8000"
-   depends_on:
-     - postgresql
+  django_gunicorn:
+    build: ./
+    volumes:
+      - static:/app/project/static
+      - media:/app/project/media
+    env_file:
+      - ./.env
+    ports:
+      - "8000:8000"
+    depends_on:
+      postgresql:
+        condition: service_healthy
 
- nginx:
-   build: 
-    context: ./nginx
-   volumes:
-     - static:/static
-     - media:/media
-   ports:
-     - "80:80"
-   depends_on:
-     - django_gunicorn
+  nginx:
+    build: 
+      context: ./nginx
+    volumes:
+      - static:/static
+      - media:/media
+    ports:
+      - "80:80"
+    depends_on:
+      - django_gunicorn
 
 volumes:
- static:
- postgresql-db:
- media:
+  static:
+  postgresql-db:
+  media:
