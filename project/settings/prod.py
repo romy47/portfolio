@@ -19,8 +19,6 @@ DATABASES = {
     }
 }
 
-STATIC_ROOT  = os.path.join(BASE_DIR, 'static')
-
 SUPERUSER_EMAIL = os.environ.get('PROD_SUPERUSER_EMAIL')
 SUPERUSER_USERNAME = os.environ.get('PROD_SUPERUSER_USERNAME')
 SUPERUSER_PASSWORD = os.environ.get('PROD_SUPERUSER_PASSWORD')
