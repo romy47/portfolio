@@ -17,7 +17,6 @@ echo "Getting certificate..."
 certbot certonly \
     --webroot \
     --webroot-path "/vol/www/" \
-    $staging_arg \
     -d "$DOMAIN" \
     --email $EMAIL \
     --rsa-key-size 4096 \
