@@ -31,6 +31,6 @@ I had a portfolio site before but I was tired of changing HTML content and wante
 4. Add ssl certificate with
     - sudo docker-compose -f docker-compose.prod.yaml run --rm certbot /app/certbot_init.sh
 5. Once the certificate is added stop all containers
-    - docker-compose -f docker-compose.prod.yaml down
+    - sudo docker-compose -f docker-compose.prod.yaml down
 6. Return the docker compose file. Use only this command for all subsequent deployments:
-    - docker-compose -f docker-compose.prod.yaml up
+    - sudo docker-compose -f docker-compose.prod.yaml up
