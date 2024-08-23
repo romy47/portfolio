@@ -14,6 +14,11 @@ services:
      - POSTGRES_USER=${PROD_DB_USER}
      - POSTGRES_NAME=${PROD_DB_NAME}
      - POSTGRES_PASSWORD=${PROD_DB_PASSWORD}
+   healthcheck:
+     test: ["CMD-SHELL", "pg_isready -U ${DEV_DB_USER}"]
+     interval: 10s
+     timeout: 5s
+     retries: 5
 
  django_gunicorn:
    build: ./
@@ -25,7 +30,8 @@ services:
    ports:
      - "8000:8000"
    depends_on:
-     - postgresql
+     postgresql:
+       condition: service_healthy
 
  nginx:
    build: 
