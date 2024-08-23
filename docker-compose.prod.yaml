@@ -12,7 +12,6 @@ services:
    environment:
      - POSTGRES_DB=${PROD_DB_NAME}
      - POSTGRES_USER=${PROD_DB_USER}
-     - POSTGRES_NAME=${PROD_DB_NAME}
      - POSTGRES_PASSWORD=${PROD_DB_PASSWORD}
    healthcheck:
      test: ["CMD-SHELL", "pg_isready -U ${PROD_DB_USER}"]
