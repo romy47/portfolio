@@ -12,25 +12,19 @@ I had a portfolio site before but I was tired of changing HTML content and wante
 ## Prerequisites
 - Python 3.12.0 or higher
 
-## Dev Installation
-1. Setup PostgreSQL
-2. Clone repo: `git clone git@github.com:romy47/portfolio.git`
-3. Create a virtual environment: `python3 -m venv venv`
-4. Activate virtual environment:
-    - Bash: `. venv/bin/activate`
-    - Windows: `. .\venv\Scripts\activate`
-5. Create an environment variable file in the root directory for storing development and production keys. Use the '.env.example' as the example.
-6. Install dependencies: `pip install -r requirements.txt`
-7. Migrate database: `python manage.py migrate`
-8. Start app: `python manage.py runserver`
 
 ## Dockerized Deployment (Production)
-1. Switch to 'docker' branch
-2. Install docker, docker-compose
-3. Create '.env' file following the example given on '.env.example'
-4. Add ssl certificate with
+1. SSH to your server
+2. Install docker, docker-compose, git
+3. CLone the project: git clone https://github.com/romy47/portfolio.git
+4. CD into the project directory: cd portfolio
+5. Switch to the appropriate branch: git checkout medium_2_docker_prod
+6. Create '.env' file following the example given on '.env.example'
+7. Change the value of the PROD_ALLOWED_HOST and PROD_CERTBOT_EMAIL in .env with your own email address and domain
+
+8. Add ssl certificate with
     - sudo docker-compose -f docker-compose.prod.yaml run --rm certbot /app/certbot_init.sh
 5. Once the certificate is added stop all containers
     - sudo docker-compose -f docker-compose.prod.yaml down
-6. Return the docker compose file. Use only this command for all subsequent deployments:
+6. Restart all services:
     - sudo docker-compose -f docker-compose.prod.yaml up
