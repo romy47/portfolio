@@ -5,8 +5,8 @@ load_dotenv()
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 ALLOWED_HOSTS = os.environ.get('PROD_ALLOWED_HOST').split(' ')
-CSRF_TRUSTED_ORIGINS = os.environ.get('PROD_ALLOWED_HOST').split(' ')
-CSRF_TRUSTED_ORIGINS = ['https://' + host for host in CSRF_TRUSTED_ORIGINS]
+CSRF_TRUSTED_ORIGINS = ['https://' + host for host in ALLOWED_HOSTS]
+CSRF_TRUSTED_ORIGINS = CSRF_TRUSTED_ORIGINS + ['http://' + host for host in ALLOWED_HOSTS]
 
 DATABASES = {
     'default': {
