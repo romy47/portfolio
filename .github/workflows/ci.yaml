@@ -1,0 +1,26 @@
+name: "CI Pipeline"
+# This CI workflow triggers on new PR or push on main branch.
+# Todo: Using this wireframe, build the final pipeline
+on:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - main
+
+jobs:
+  # This handles all of our unit tests
+  unit_tests:
+    name: "Unit Tests"
+    runs-on: ubuntu-latest
+
+  # This checks syntax and styling standards
+  lint:
+    name: "Lint Test"
+    runs-on: ubuntu-latest
+
+  # This checks security vulnerabilities
+  security:
+    name: "Security Check"
+    runs-on: ubuntu-latest

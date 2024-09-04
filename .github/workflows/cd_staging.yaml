@@ -1,0 +1,19 @@
+name: "CD Staging Pipeline"
+# This CD workflow triggers on direct push or aproved PR on the main branch.
+# This CD Pipeline waits for CI to be comoleted.
+
+# Todo: Using this wireframe, build the final pipeline
+on:
+  workflow_run:
+    workflows: ["CI Pipeline"]
+    types:
+      - completed
+  push:
+    branches:
+      - main
+  pull_request:
+    types:
+      - closed
+jobs:
+  deploy_staging:
+    runs-on: ubuntu-latest

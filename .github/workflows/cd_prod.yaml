@@ -1,0 +1,15 @@
+name: "CD Prod Pipeline"
+# This CD workflow triggers on manual workflow dispatch.
+# This CD Pipeline also needs the CD Staging to be completed.
+
+# Todo: Using this wireframe, build the final pipeline
+on:
+  workflow_dispatch:
+  workflow_run:
+    workflows: ["CD Staging Pipeline"]
+    types:
+      - completed
+
+jobs:
+  deploy_production:
+    runs-on: ubuntu-latest
