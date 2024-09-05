@@ -10,17 +10,45 @@ on:
       - main
 
 jobs:
-  # This handles all of our unit tests
-  unit_tests:
-    name: "Unit Tests"
+  test_and_build:
+    name: "Test and Build"
+    defaults:
+      run:
+        shell: bash
     runs-on: ubuntu-latest
+    steps:
+      - name: "Checkout Repo"
+        uses: actions/checkout@v3
+      - name: "Set up Docker Buildx"
+        uses: docker/setup-buildx-action@v2
 
-  # This checks syntax and styling standards
-  lint:
-    name: "Lint Test"
-    runs-on: ubuntu-latest
+      # Build docker images
+      - name: Build Docker Image
+        run: docker-compose -f docker-compose.prod.yaml build
 
-  # This checks security vulnerabilities
-  security:
-    name: "Security Check"
+      # This handles all of our unit tests
+      - name: "Run Unit Tests"
+        run: docker-compose -f docker-compose.prod.yaml run django_gunicorn pytest
+
+      # This checks syntax and styling standards
+      - name: Run Linting
+        run: docker-compose -f docker-compose.prod.yaml run django_gunicorn flake8 .
+
+  # GitHub Security Scanning using CodeQL.This checks security vulnerabilities
+  security_scan:
+    name: "Security Scanning"
     runs-on: ubuntu-latest
+    permissions:
+      actions: write
+      security-events: write
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Initialize CodeQL
+        uses: github/codeql-action/init@v2
+        with:
+          languages: python
+      - name: Perform CodeQL Analysis
+        uses: github/codeql-action/analyze@v2
