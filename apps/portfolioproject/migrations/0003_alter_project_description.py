@@ -7,13 +7,13 @@ from django.db import migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('portfolioproject', '0002_rename_projecttools_projecttool'),
+        ("portfolioproject", "0002_rename_projecttools_projecttool"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='project',
-            name='description',
-            field=ckeditor.fields.RichTextField(blank=True, default=''),
+            model_name="project",
+            name="description",
+            field=ckeditor.fields.RichTextField(blank=True, default=""),
         ),
     ]

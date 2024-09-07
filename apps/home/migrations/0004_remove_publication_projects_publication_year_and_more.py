@@ -6,33 +6,37 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('home', '0003_education_specialization'),
-        ('programming', '0001_initial'),
+        ("home", "0003_education_specialization"),
+        ("programming", "0001_initial"),
     ]
 
     operations = [
         migrations.RemoveField(
-            model_name='publication',
-            name='projects',
+            model_name="publication",
+            name="projects",
         ),
         migrations.AddField(
-            model_name='publication',
-            name='year',
+            model_name="publication",
+            name="year",
             field=models.IntegerField(blank=True, null=True),
         ),
         migrations.AlterField(
-            model_name='experienceactivity',
-            name='programming_tools',
-            field=models.ManyToManyField(blank=True, related_name='experience_activities', to='programming.programmingtool'),
+            model_name="experienceactivity",
+            name="programming_tools",
+            field=models.ManyToManyField(
+                blank=True,
+                related_name="experience_activities",
+                to="programming.programmingtool",
+            ),
         ),
         migrations.AlterField(
-            model_name='publication',
-            name='description',
-            field=models.TextField(blank=True, default=''),
+            model_name="publication",
+            name="description",
+            field=models.TextField(blank=True, default=""),
         ),
         migrations.AlterField(
-            model_name='publication',
-            name='title',
+            model_name="publication",
+            name="title",
             field=models.CharField(max_length=300),
         ),
     ]

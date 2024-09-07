@@ -7,20 +7,35 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('portfolioproject', '0003_alter_project_description'),
+        ("portfolioproject", "0003_alter_project_description"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='ProjectHighlights',
+            name="ProjectHighlights",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('description', models.TextField()),
-                ('url', models.URLField(blank=True, default='')),
-                ('is_featured', models.BooleanField(default=False)),
-                ('created_at', models.DateTimeField(auto_now_add=True)),
-                ('updated_at', models.DateTimeField(auto_now=True)),
-                ('project', models.ForeignKey(on_delete=django.db.models.deletion.PROTECT, related_name='project_highlights', to='portfolioproject.project')),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("description", models.TextField()),
+                ("url", models.URLField(blank=True, default="")),
+                ("is_featured", models.BooleanField(default=False)),
+                ("created_at", models.DateTimeField(auto_now_add=True)),
+                ("updated_at", models.DateTimeField(auto_now=True)),
+                (
+                    "project",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.PROTECT,
+                        related_name="project_highlights",
+                        to="portfolioproject.project",
+                    ),
+                ),
             ],
         ),
     ]
