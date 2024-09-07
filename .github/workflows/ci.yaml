@@ -39,15 +39,15 @@ jobs:
 
       # Build docker images
       - name: Build and Run Docker Images
-        run: docker-compose -f docker-compose.prod.yaml up --build
+        run: sudo docker-compose -f docker-compose.prod.yaml up --build
 
       # This handles all of our unit tests
       - name: "Run Unit Tests"
-        run: docker-compose -f docker-compose.prod.yaml run django_gunicorn pytest
+        run: sudo docker-compose -f docker-compose.prod.yaml run django_gunicorn pytest
 
       # This checks syntax and styling standards
       - name: Run Linting
-        run: docker-compose -f docker-compose.prod.yaml run django_gunicorn flake8 .
+        run: sudo docker-compose -f docker-compose.prod.yaml run django_gunicorn flake8 .
 
   # GitHub Security Scanning using CodeQL.This checks security vulnerabilities
   security_scan:
