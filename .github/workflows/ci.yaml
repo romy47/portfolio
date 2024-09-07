@@ -1,13 +1,21 @@
 name: "CI Pipeline"
 # This CI workflow triggers on new PR or push on main branch.
 # Todo: Using this wireframe, build the final pipeline
+
+# This should be the original event outline
+# on:
+#   pull_request:
+#     branches:
+#       - main
+#   push:
+#     branches:
+#       - main
+
+# This is a test event outline for testing CI on test branch
 on:
-  pull_request:
-    branches:
-      - main
   push:
     branches:
-      - main
+      - github_actions
 
 jobs:
   test_and_build:
