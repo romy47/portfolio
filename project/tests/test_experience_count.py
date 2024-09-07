@@ -62,7 +62,8 @@ def test_experience_count():
     # Create a PersonalSkill associated with the ProgrammingTool
     skill = PersonalSkill.objects.create(
         title="Backend Development",
-        programming_tool=tool
+        programming_tool=tool,
+        category=category
     )
     
     # Test: Check the experience_count method
