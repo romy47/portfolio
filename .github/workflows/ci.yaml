@@ -11,7 +11,7 @@ name: "CI Pipeline"
 #     branches:
 #       - main
 
-# This is a test event outline for testing CI on test branch
+# This is a test event outline for testing CI on test branch.
 
 on:
   push:
