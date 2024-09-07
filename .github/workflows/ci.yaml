@@ -23,8 +23,8 @@ jobs:
         uses: docker/setup-buildx-action@v2
 
       # Build docker images
-      - name: Build Docker Image
-        run: docker-compose -f docker-compose.prod.yaml build
+      - name: Build and Run Docker Images
+        run: docker-compose -f docker-compose.prod.yaml up --build
 
       # This handles all of our unit tests
       - name: "Run Unit Tests"

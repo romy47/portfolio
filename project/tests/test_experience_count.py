@@ -1,9 +1,8 @@
 import pytest
-from django.contrib.auth.models import User
 from django.conf import settings
 from django.core.files.uploadedfile import SimpleUploadedFile
-from portfolio.apps.home.models import Employer, Experience, ExperienceActivity, PersonalSkill
-from portfolio.apps.programming.models import Category, ProgrammingTool
+from apps.home.models import Employer, Experience, ExperienceActivity, PersonalSkill
+from apps.programming.models import Category, ProgrammingTool
     
 @pytest.mark.django_db
 def test_experience_count():
