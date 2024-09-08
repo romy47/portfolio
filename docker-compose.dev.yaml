@@ -26,6 +26,14 @@ services:
      - media:/app/project/media
    env_file:
      - ./.env
+   environment:
+     - SECRET_KEY=${SECRET_KEY}
+     - IS_DEV=${IS_DEV}
+     - DEV_DB_HOST=${DEV_DB_HOST}
+     - DEV_DB_PORT=${DEV_DB_PORT}
+     - DEV_SUPERUSER_EMAIL=${DEV_SUPERUSER_EMAIL}
+     - DEV_SUPERUSER_USERNAME=${DEV_SUPERUSER_USERNAME}
+     - DEV_SUPERUSER_PASSWORD=${DEV_SUPERUSER_PASSWORD}
    ports:
      - "8000:8000"
    depends_on:

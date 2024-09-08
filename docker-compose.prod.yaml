@@ -26,6 +26,14 @@ services:
      - media:/app/project/media
    env_file:
      - ./.env
+   environment:
+     - SECRET_KEY=${SECRET_KEY}
+     - IS_DEV=${IS_DEV}
+     - PROD_DB_HOST=${PROD_DB_HOST}
+     - PROD_DB_PORT=${PROD_DB_PORT}
+     - PROD_SUPERUSER_EMAIL=${PROD_SUPERUSER_EMAIL}
+     - PROD_SUPERUSER_USERNAME=${PROD_SUPERUSER_USERNAME}
+     - PROD_SUPERUSER_PASSWORD=${PROD_SUPERUSER_PASSWORD}
    ports:
      - "8000:8000"
    depends_on:
@@ -36,6 +44,8 @@ services:
    build: 
     context: ./nginx
     dockerfile: Dockerfile.prod
+   env_file:
+     - ./.env
    environment:
      - DOMAIN=${PROD_ALLOWED_HOST}
    volumes:
