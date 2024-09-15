@@ -6,9 +6,8 @@ services:
      - postgresql-db:/var/lib/postgresql/data
    ports:
      - "5432:5432"
-  #  env_file:
-  #    - path: ./.env
-  #      required: false
+   env_file:
+     - path: ./.env
    environment:
      - POSTGRES_DB=${DEV_DB_NAME}
      - POSTGRES_USER=${DEV_DB_USER}
@@ -24,9 +23,8 @@ services:
    volumes:
      - static:/app/project/static
      - media:/app/project/media
-  #  env_file:
-  #    - path:  ./.env
-  #      required: false
+   env_file:
+     - path:  ./.env
    environment:
      - SECRET_KEY=${SECRET_KEY}
      - IS_DEV=${IS_DEV}
@@ -37,12 +35,6 @@ services:
      - DEV_SUPERUSER_PASSWORD=${DEV_SUPERUSER_PASSWORD}
    ports:
      - "8000:8000"
-   healthcheck:
-     test: ["CMD-SHELL", "curl -f http://localhost:8000 || exit 1"]
-     interval: 10s
-     timeout: 5s
-     retries: 5
-     start_period: 30s
    depends_on:
      postgresql:
        condition: service_healthy
