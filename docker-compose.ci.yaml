@@ -6,9 +6,6 @@ services:
      - postgresql-db:/var/lib/postgresql/data
    ports:
      - "5432:5432"
-  #  env_file:
-  #    - path: ./.env
-  #      required: false
    environment:
      - POSTGRES_DB=${DEV_DB_NAME}
      - POSTGRES_USER=${DEV_DB_USER}
@@ -24,9 +21,6 @@ services:
    volumes:
      - static:/app/project/static
      - media:/app/project/media
-  #  env_file:
-  #    - path:  ./.env
-  #      required: false
    environment:
      - SECRET_KEY=${SECRET_KEY}
      - IS_DEV=${IS_DEV}
