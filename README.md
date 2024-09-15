@@ -1,5 +1,5 @@
 # Dynamic Portfolio and Blog App
-A database-driven portfolio and blog site built with Django, PostgreSQL, and Bootstrap. It uses Docker, Certbot, and Nginx for deployment and is hosted on an AWS EC2 instance.
+A database-driven portfolio and blog site built with Django, PostgreSQL, and Bootstrap. It uses Docker, Certbot, and Nginx for deployment and is hosted on an AWS EC2 instance. This project includes CI/CD pipelines using GitHub Actions.
 
 ## Motivation
 I had a portfolio site before but I was tired of changing HTML content and wanted to have a more structured approach. For my portfolio site, I wanted to organize work experience, projects, blog posts, publications, and skills associated with a common set of programming languages and frameworks. For example, adding 'Django' into a portfolio project and then adding it again to another blog post about Django development. This design ensures that data is linked across multiple entities minimizing redundancy. It also facilitates finding related entity types through programming language matches. Django includes a built-in admin interface for inserting new data into these entities. I am currently using this project for my portfolio and plan to update various components regularly.
