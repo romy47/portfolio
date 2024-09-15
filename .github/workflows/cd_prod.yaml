@@ -1,15 +1,47 @@
-# name: "CD Prod Pipeline"
+name: "CD Production Pipeline"
 # This CD workflow triggers on manual workflow dispatch.
-# This CD Pipeline also needs the CD Staging to be completed.
 
-# Todo: Using this wireframe, build the final pipeline
-# on:
-#   workflow_dispatch:
-#   workflow_run:
-#     workflows: ["CD Staging Pipeline"]
-#     types:
-#       - completed
+on:
+  workflow_dispatch:
 
-# jobs:
-#   deploy_production:
-#     runs-on: ubuntu-latest
+jobs:
+  deploy_production:
+    defaults:
+      run:
+        shell: bash
+    runs-on: ubuntu-latest
+    environment: production
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Add SSH Key
+        run: |
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > private_key
+          chmod 600 private_key
+
+      - name: Deploy to EC2
+        env:
+          PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          HOSTNAME: ${{secrets.HOSTNAME}}
+          USER_NAME: ${{secrets.USER_NAME}}
+          DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
+          DOCKERHUB_TOKEN: ${{ secrets.DOCKERHUB_TOKEN }}
+        run: |
+          ssh -o StrictHostKeyChecking=no -i private_key ${USER_NAME}@${HOSTNAME} '
+              cd /home/ubuntu/portfolio
+              git checkout github_actions
+              git pull
+
+              echo "Pulling the latest Docker images from Docker Hub"
+              sudo docker-compose -f docker-compose.prod.dockerhub.yaml pull
+
+              # Bring up the services with the updated images
+              echo "Starting the services with docker-compose"
+              sudo docker-compose -f docker-compose.prod.dockerhub.yaml up -d --build
+
+              # Clean up unused Docker images to save disk space
+              echo "Cleaning up unused Docker images"
+              sudo docker image prune -f
+          '

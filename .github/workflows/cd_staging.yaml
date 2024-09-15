@@ -1,8 +1,8 @@
 name: "CD Staging Pipeline"
 # This CD workflow triggers on direct push or aproved PR on the main branch.
-# This CD Pipeline waits for CI to be comoleted.
+# The if condition ensures that it does not run when PR is closed without approving.
+# This CD Pipeline waits for CI to be successfully completed.
 
-# This should be the original event outline
 on:
   workflow_run:
     workflows: ["CI Pipeline"]
