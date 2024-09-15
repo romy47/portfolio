@@ -6,13 +6,13 @@ from django.db import migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('portfolioproject', '0001_initial'),
-        ('programming', '0001_initial'),
+        ("portfolioproject", "0001_initial"),
+        ("programming", "0001_initial"),
     ]
 
     operations = [
         migrations.RenameModel(
-            old_name='ProjectTools',
-            new_name='ProjectTool',
+            old_name="ProjectTools",
+            new_name="ProjectTool",
         ),
     ]

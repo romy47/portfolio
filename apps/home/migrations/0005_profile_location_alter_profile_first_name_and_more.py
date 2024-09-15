@@ -6,23 +6,23 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('home', '0004_remove_publication_projects_publication_year_and_more'),
+        ("home", "0004_remove_publication_projects_publication_year_and_more"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='profile',
-            name='location',
-            field=models.CharField(blank=True, default='', max_length=40),
+            model_name="profile",
+            name="location",
+            field=models.CharField(blank=True, default="", max_length=40),
         ),
         migrations.AlterField(
-            model_name='profile',
-            name='first_name',
-            field=models.CharField(blank=True, default='', max_length=20),
+            model_name="profile",
+            name="first_name",
+            field=models.CharField(blank=True, default="", max_length=20),
         ),
         migrations.AlterField(
-            model_name='profile',
-            name='last_name',
-            field=models.CharField(blank=True, default='', max_length=20),
+            model_name="profile",
+            name="last_name",
+            field=models.CharField(blank=True, default="", max_length=20),
         ),
     ]

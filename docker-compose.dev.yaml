@@ -1,4 +1,3 @@
-version: '3.8'
 services:
  postgresql:
    image: postgres
@@ -8,7 +7,7 @@ services:
    ports:
      - "5432:5432"
    env_file:
-     - ./.env
+     - path: ./.env
    environment:
      - POSTGRES_DB=${DEV_DB_NAME}
      - POSTGRES_USER=${DEV_DB_USER}
@@ -25,7 +24,15 @@ services:
      - static:/app/project/static
      - media:/app/project/media
    env_file:
-     - ./.env
+     - path:  ./.env
+   environment:
+     - SECRET_KEY=${SECRET_KEY}
+     - IS_DEV=${IS_DEV}
+     - DEV_DB_HOST=${DEV_DB_HOST}
+     - DEV_DB_PORT=${DEV_DB_PORT}
+     - DEV_SUPERUSER_EMAIL=${DEV_SUPERUSER_EMAIL}
+     - DEV_SUPERUSER_USERNAME=${DEV_SUPERUSER_USERNAME}
+     - DEV_SUPERUSER_PASSWORD=${DEV_SUPERUSER_PASSWORD}
    ports:
      - "8000:8000"
    depends_on:

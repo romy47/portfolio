@@ -1,0 +1,58 @@
+name: "CD Staging Pipeline"
+# This CD workflow triggers on direct push or aproved PR on the main branch.
+# This CD Pipeline waits for CI to be comoleted.
+
+# This should be the original event outline
+on:
+  workflow_run:
+    workflows: ["CI Pipeline"]
+    types:
+      - completed
+
+jobs:
+  deploy_staging:
+    defaults:
+      run:
+        shell: bash
+    runs-on: ubuntu-latest
+    environment: staging
+    if: |
+      github.event.workflow_run.conclusion == 'success' &&
+      (
+        github.event.workflow_run.head_branch == 'main' || 
+        (github.event.workflow_run.event == 'pull_request' && github.event.pull_request.merged == true)
+      )
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Add SSH Key
+        run: |
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > private_key
+          chmod 600 private_key
+
+      - name: Deploy to EC2
+        env:
+          PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          HOSTNAME: ${{secrets.HOSTNAME}}
+          USER_NAME: ${{secrets.USER_NAME}}
+          DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
+          DOCKERHUB_TOKEN: ${{ secrets.DOCKERHUB_TOKEN }}
+
+        run: |
+          ssh -o StrictHostKeyChecking=no -i private_key ${USER_NAME}@${HOSTNAME} '
+              cd /home/ubuntu/portfolio
+              git checkout github_actions
+              git pull
+
+              echo "Pulling the latest Docker images from Docker Hub"
+              sudo docker-compose -f docker-compose.prod.dockerhub.yaml pull
+
+              # Bring up the services with the updated images
+              echo "Starting the services with docker-compose"
+              sudo docker-compose -f docker-compose.prod.dockerhub.yaml up -d --build
+
+              # Clean up unused Docker images to save disk space
+              echo "Cleaning up unused Docker images"
+              sudo docker image prune -f
+          '
